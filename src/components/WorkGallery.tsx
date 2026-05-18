@@ -64,7 +64,7 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn btn-ghost work-project__link"
+              className="btn btn-primary work-project__link"
             >
               Visit site
               <ArrowUpRight size={13} strokeWidth={2} aria-hidden />
