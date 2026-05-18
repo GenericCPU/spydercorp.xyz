@@ -33,9 +33,10 @@
     align-self: stretch;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-end;
     align-items: flex-end;
-    padding-top: 0;
+    padding-top: clamp(2.5rem, 8vh, 4.5rem);
+    padding-bottom: clamp(1.25rem, 3vh, 2rem);
     flex-shrink: 0;
     gap: 0.75rem;
     min-height: 100%;
