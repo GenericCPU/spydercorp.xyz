@@ -59,15 +59,6 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
 
       {project.tags.length > 0 || project.url ? (
         <div className="work-project__meta">
-          {project.tags.length > 0 ? (
-            <ul className="work-project__tags">
-              {project.tags.map((tag) => (
-                <li key={tag} className="chip">
-                  {tag}
-                </li>
-              ))}
-            </ul>
-          ) : null}
           {project.url ? (
             <a
               href={project.url}
@@ -78,6 +69,15 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
               Visit site
               <ArrowUpRight size={13} strokeWidth={2} aria-hidden />
             </a>
+          ) : null}
+          {project.tags.length > 0 ? (
+            <ul className="work-project__tags">
+              {project.tags.map((tag) => (
+                <li key={tag} className="chip">
+                  {tag}
+                </li>
+              ))}
+            </ul>
           ) : null}
         </div>
       ) : null}
