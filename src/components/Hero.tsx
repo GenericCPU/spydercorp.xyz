@@ -44,7 +44,7 @@ export function Hero() {
             </div>
             <div>
               <dt>Engagement</dt>
-              <dd>Flexible pay · pro bono local</dd>
+              <dd>Flexible pay · pro bono for local small businesses</dd>
             </div>
           </dl>
         </div>

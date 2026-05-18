@@ -56,8 +56,8 @@ export function Services() {
           <h2 className="section-title">One studio. Full stack.</h2>
           <p className="section-lead">
             Marketing, design, engineering, and custom systems — not siloed vendors. We work with
-            you one-on-one, with payment that fits your business, including pro bono support for
-            qualifying local shops.
+            you one-on-one, with payment that fits your business, including pro bono opportunities
+            for qualifying local small businesses.
           </p>
         </header>
 

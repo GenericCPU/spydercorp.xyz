@@ -30,7 +30,8 @@
       <rect x="560" y="278" width="8" height="8" fill="#e30613"/><text x="580" y="288" font-size="19" fill="#0a0a0a">Custom systems &amp; admin</text>
       <rect x="560" y="318" width="8" height="8" fill="#e30613"/><text x="580" y="328" font-size="19" fill="#0a0a0a">Flexible engagement</text>
       <line x1="560" y1="380" x2="978" y2="380" stroke="#e5e5e5"/>
-      <text x="560" y="418" font-size="15" fill="#737373">Project &#183; retainer &#183; pro bono for qualifying local shops</text>
+      <text x="560" y="402" font-size="13" fill="#737373">Project &#183; retainer</text>
+      <text x="560" y="418" font-size="13" fill="#737373">Pro bono opportunities for local small businesses</text>
     </g>
     <g transform="translate(900 468) scale(0.72)"><!-- MARK --></g>
   </g>

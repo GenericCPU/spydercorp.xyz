@@ -57,9 +57,9 @@ export const studioCommitments = [
   },
   {
     id: 'probono',
-    title: 'Pro bono for local shops',
+    title: 'Pro bono for local small businesses',
     description:
-      'Small Halifax-area businesses with a real community need can qualify for reduced or no-cost work — ask honestly; we’ll tell you if it’s a fit.',
+      'Pro bono opportunities for qualifying local small businesses with a real community need — ask honestly; we’ll tell you if it’s a fit.',
   },
 ] as const;
 
