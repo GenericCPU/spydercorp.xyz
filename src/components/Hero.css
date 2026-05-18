@@ -21,7 +21,7 @@
     /* Copy uses remaining width; card column is only as wide as the card */
     grid-template-columns: minmax(0, 1fr) auto;
     gap: clamp(2rem, 4vw, 3rem);
-    align-items: start;
+    align-items: stretch;
   }
 
   .hero__copy {
@@ -30,11 +30,15 @@
   }
 
   .hero__brand {
-    align-self: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: flex-end;
     padding-top: 0;
     flex-shrink: 0;
     gap: 0.75rem;
+    min-height: 100%;
   }
 
   .hero__card-label {
@@ -42,6 +46,7 @@
     max-width: 100%;
     font-size: clamp(1.85rem, 2.8vw, 2.5rem);
     text-align: right;
+    flex-shrink: 0;
   }
 
   .hero__title {
