@@ -170,20 +170,28 @@ img {
   line-height: 1.65;
 }
 
+/* Chip scale — shared by tags, buttons, compact CTAs */
+.chip,
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.5rem;
-  padding: 0.7rem 1.25rem;
+  gap: 0.35rem;
+  padding: 0.28rem 0.55rem;
   border-radius: var(--radius-lg);
   font-weight: 600;
-  font-size: 0.9rem;
-  border: 1px solid transparent;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--border);
   transition:
     background 0.15s ease,
     border-color 0.15s ease,
     color 0.15s ease;
+}
+
+.chip {
+  color: var(--text-muted);
 }
 
 .btn-primary {
@@ -198,14 +206,15 @@ img {
 }
 
 .btn-ghost {
-  background: var(--bg-card);
+  background: transparent;
   border-color: var(--border);
-  color: var(--text);
+  color: var(--text-muted);
 }
 
 .btn-ghost:hover {
   border-color: var(--border-strong);
   background: var(--bg-elevated);
+  color: var(--text);
 }
 
 .panel {

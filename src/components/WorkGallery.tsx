@@ -62,7 +62,9 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
           {project.tags.length > 0 ? (
             <ul className="work-project__tags">
               {project.tags.map((tag) => (
-                <li key={tag}>{tag}</li>
+                <li key={tag} className="chip">
+                  {tag}
+                </li>
               ))}
             </ul>
           ) : null}
@@ -74,7 +76,7 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
               className="btn btn-ghost work-project__link"
             >
               Visit site
-              <ArrowUpRight size={16} strokeWidth={2} aria-hidden />
+              <ArrowUpRight size={13} strokeWidth={2} aria-hidden />
             </a>
           ) : null}
         </div>

@@ -179,15 +179,9 @@
   }
 
   .header__cta {
-    display: inline-flex;
     margin-left: 0.35rem;
-    padding: 0.34rem 0.85rem;
-    font-size: 0.68rem;
-    font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    line-height: 1.2;
-    border-radius: var(--radius-lg);
   }
 
   .header__icon-btn {
