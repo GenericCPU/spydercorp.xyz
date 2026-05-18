@@ -165,3 +165,14 @@
   color: var(--text);
 }
 
+@media (max-width: 899px) {
+  .hero__brand {
+    gap: 0.45rem;
+    margin-bottom: -0.15rem;
+  }
+
+  .hero__card-label {
+    margin-bottom: 0.05rem;
+  }
+}
+
