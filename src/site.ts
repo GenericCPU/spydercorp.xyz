@@ -1,5 +1,5 @@
 export const site = {
-  domain: 'spidercorp.xyz',
+  domain: 'spydercorp.xyz',
   brand: 'spydercorp',
   tagline: 'Web, brand, and systems — built to fit how you actually operate.',
   email: 'brandongcryderman@gmail.com',

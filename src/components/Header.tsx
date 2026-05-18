@@ -3,6 +3,7 @@ import { Menu, Moon, Sun } from 'lucide-react';
 import { useActiveSection } from '../hooks/useActiveSection';
 import { navLinks, navSectionIds } from '../nav';
 import { Logo } from './Logo';
+import { site } from '../site';
 import { useTheme } from '../theme/ThemeContext';
 import { MobileNav } from './MobileNav';
 import './Header.css';
@@ -33,8 +34,9 @@ export function Header() {
             >
               <Menu size={20} strokeWidth={1.75} />
             </button>
-            <a href="#" className="header__logo" aria-label="spydercorp home">
+            <a href="#" className="header__brand" aria-label={`${site.brand} home`}>
               <Logo variant="mark" />
+              <span className="header__brand-text">{site.domain}</span>
             </a>
           </div>
 

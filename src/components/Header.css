@@ -36,10 +36,28 @@
   min-width: 0;
 }
 
-.header__logo {
+.header__brand {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
   min-width: 0;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.header__brand:hover .header__brand-text {
+  color: var(--accent);
+}
+
+.header__brand-text {
+  font-family: var(--font-display);
+  font-size: clamp(0.78rem, 2.6vw, 0.9rem);
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  transition: color 0.2s ease;
 }
 
 .header__nav {
@@ -145,7 +163,11 @@
     min-width: 0;
   }
 
-  .header__logo .logo-mark svg {
+  .header__brand .logo-mark svg {
     height: 1.75rem;
+  }
+
+  .header__brand-text {
+    font-size: clamp(0.7rem, 2.4vw, 0.82rem);
   }
 }
