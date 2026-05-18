@@ -26,6 +26,7 @@
   .hero__copy {
     max-width: none;
     padding-right: clamp(1rem, 2vw, 2rem);
+    align-self: start;
   }
 
   .hero__brand {
@@ -33,6 +34,7 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    align-self: center;
     padding: 0;
     margin: 0;
   }
@@ -176,12 +178,24 @@
 
 @media (max-width: 899px) {
   .hero__brand {
+    align-self: start;
     gap: 0.45rem;
     margin-bottom: -0.15rem;
   }
 
   .hero__card-label {
     margin-bottom: 0.05rem;
+  }
+}
+
+/* Desktop card alignment — must follow base .hero__brand (align-self: start) */
+@media (min-width: 900px) {
+  .hero__grid {
+    align-items: center;
+  }
+
+  .hero__brand {
+    align-self: center;
   }
 }
 
