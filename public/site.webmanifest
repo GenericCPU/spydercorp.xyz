@@ -1,6 +1,6 @@
 {
-  "name": "spydercorp",
-  "short_name": "spydercorp",
+  "name": "SpyderCorp",
+  "short_name": "SpyderCorp",
   "description": "Web, brand, and custom systems for local businesses and product teams.",
   "start_url": "/",
   "display": "standalone",

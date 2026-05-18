@@ -13,7 +13,7 @@ function LogoMark({ variant, className }: { variant: 'compact' | 'mark'; classNa
     <span
       className={`logo-mark logo-mark--${variant} ${className}`.trim()}
       role="img"
-      aria-label="spydercorp"
+      aria-label="SpyderCorp"
       dangerouslySetInnerHTML={{ __html: markHtml }}
     />
   );
@@ -29,7 +29,7 @@ export function Logo({ variant = 'full', className = '' }: LogoProps) {
     <span className={`logo-frame logo-frame--full ${className}`.trim()}>
       <img
         src="/logo/spydercorp.svg"
-        alt="spydercorp"
+        alt="SpyderCorp"
         className="logo-frame__img"
         width={320}
         height={100}

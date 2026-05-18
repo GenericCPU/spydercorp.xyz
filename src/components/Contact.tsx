@@ -1,7 +1,7 @@
 import { createListCollection } from '@ark-ui/react/collection';
 import { Field } from '@ark-ui/react/field';
 import { Select } from '@ark-ui/react/select';
-import { Mail, MapPin } from 'lucide-react';
+import { Check, Mail, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { submitContactForm } from '../lib/submitContact';
 import { projectTypes, site } from '../site';
@@ -149,7 +149,9 @@ export function Contact() {
                       {projectCollection.items.map((item) => (
                         <Select.Item key={item.value} item={item} className="sc-select-item">
                           <Select.ItemText>{item.label}</Select.ItemText>
-                          <Select.ItemIndicator>✓</Select.ItemIndicator>
+                          <Select.ItemIndicator>
+                            <Check size={14} strokeWidth={2.5} aria-hidden />
+                          </Select.ItemIndicator>
                         </Select.Item>
                       ))}
                     </Select.Content>

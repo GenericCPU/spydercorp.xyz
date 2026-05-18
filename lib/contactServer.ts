@@ -36,7 +36,7 @@ export async function forwardContactToFormSubmit(
         name,
         email,
         message: [`Project type: ${projectType}`, '', message].join('\n'),
-        _subject: 'Project inquiry — spydercorp',
+        _subject: 'Project inquiry — SpyderCorp',
         _template: 'table',
       }),
     });

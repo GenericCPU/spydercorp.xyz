@@ -98,11 +98,30 @@
 }
 
 .sc-select-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
   padding: 0.5rem 0.65rem;
   border-radius: 4px;
   font-size: 0.9rem;
+  line-height: 1.25;
   cursor: pointer;
   color: var(--text-muted);
+}
+
+.sc-select-item [data-part='item-text'] {
+  flex: 1;
+  min-width: 0;
+}
+
+.sc-select-item [data-part='item-indicator'] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  line-height: 1;
+  color: var(--accent);
 }
 
 .sc-select-item[data-highlighted] {

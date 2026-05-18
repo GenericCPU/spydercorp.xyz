@@ -89,6 +89,7 @@
   justify-content: center;
   align-items: flex-start;
   align-self: center;
+  overflow: visible;
 }
 
 @media (min-width: 900px) {

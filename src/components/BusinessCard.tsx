@@ -5,7 +5,11 @@ import './BusinessCard.css';
 
 const markHtml = markSvg
   .replace(/\saria-label="[^"]*"/, ' aria-hidden="true"')
-  .replace(/fill="currentColor"/g, 'fill="#0a0a0a"');
+  .replace(/fill="currentColor"/g, 'fill="#0a0a0a"')
+  .replace(
+    /<svg /,
+    '<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" ',
+  );
 
 const SERVICES = [
   'Brand & marketing',
@@ -33,7 +37,7 @@ export function BusinessCard() {
         aria-label={flipped ? 'Business card, back. Click to show front.' : 'Business card, front. Click to show back.'}
       >
         <div className="biz-card__scene">
-          <div className="biz-card__inner" data-flipped={flipped || undefined}>
+          <div className={`biz-card__inner${flipped ? ' biz-card__inner--flipped' : ''}`}>
             <article className="biz-card__face biz-card__face--front" aria-hidden={flipped}>
               <div className="biz-card__accent biz-card__accent--bottom" />
               <div
