@@ -1,3 +1,4 @@
+import { AppToaster } from './components/AppToaster';
 import { Contact } from './components/Contact';
 import { Faq } from './components/Faq';
 import { Footer } from './components/Footer';
@@ -28,6 +29,7 @@ export default function App() {
         <Contact />
       </main>
       <Footer />
+      <AppToaster />
     </>
   );
 }

@@ -4,6 +4,7 @@ import { Select } from '@ark-ui/react/select';
 import { Check, Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { submitContactForm } from '../lib/submitContact';
+import { toaster } from '../lib/toaster';
 import { projectTypes, site } from '../site';
 import './Contact.css';
 
@@ -56,9 +57,13 @@ export function Contact() {
     });
 
     if (result.ok) {
-      setStatus('success');
+      setStatus('idle');
       form.reset();
       setProjectType([projectTypes[0].value]);
+      toaster.success({
+        title: 'Message sent',
+        description: "We'll get back to you at the email you provided.",
+      });
       return;
     }
 
@@ -98,12 +103,6 @@ export function Contact() {
           </aside>
 
           <div className="contact__form-wrap">
-            {status === 'success' && (
-              <p className="contact__alert contact__alert--success" role="status">
-                Message sent — we&apos;ll get back to you at the email you provided.
-              </p>
-            )}
-
             {status === 'error' && (
               <p className="contact__alert contact__alert--error" role="alert">
                 {errorMessage}{' '}

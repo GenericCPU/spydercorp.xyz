@@ -114,41 +114,54 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
               <Dialog.Title className="sr-only">
                 {lightbox.current?.caption ?? project.title}
               </Dialog.Title>
-              <div className="work-lightbox__toolbar">
-                <span className="work-lightbox__meta">
-                  {project.title} · {lightbox.current?.caption}
-                </span>
-                <Dialog.CloseTrigger className="work-lightbox__close" aria-label="Close">
-                  <X size={22} />
-                </Dialog.CloseTrigger>
-              </div>
+              <header className="work-lightbox__header">
+                {shots.length > 1 ? (
+                  <button
+                    type="button"
+                    className="work-lightbox__control"
+                    aria-label="Previous image"
+                    onClick={() => lightbox.go(-1)}
+                  >
+                    <ChevronLeft size={20} strokeWidth={2} aria-hidden />
+                  </button>
+                ) : (
+                  <span className="work-lightbox__control-spacer" aria-hidden />
+                )}
+
+                <div className="work-lightbox__text">
+                  <p className="work-lightbox__project">{project.title}</p>
+                  {lightbox.current?.caption ? (
+                    <p className="work-lightbox__caption">{lightbox.current.caption}</p>
+                  ) : null}
+                </div>
+
+                <div className="work-lightbox__actions">
+                  {shots.length > 1 ? (
+                    <span className="work-lightbox__count" aria-live="polite">
+                      {(lightbox.index ?? 0) + 1}
+                      <span className="work-lightbox__count-sep">/</span>
+                      {shots.length}
+                    </span>
+                  ) : null}
+                  {shots.length > 1 ? (
+                    <button
+                      type="button"
+                      className="work-lightbox__control"
+                      aria-label="Next image"
+                      onClick={() => lightbox.go(1)}
+                    >
+                      <ChevronRight size={20} strokeWidth={2} aria-hidden />
+                    </button>
+                  ) : null}
+                  <Dialog.CloseTrigger className="work-lightbox__control" aria-label="Close">
+                    <X size={20} strokeWidth={2} aria-hidden />
+                  </Dialog.CloseTrigger>
+                </div>
+              </header>
               {lightbox.current && (
                 <figure className="work-lightbox__figure">
                   <img src={lightbox.current.src} alt={lightbox.current.alt} />
                 </figure>
-              )}
-              {shots.length > 1 && (
-                <div className="work-lightbox__nav">
-                  <button
-                    type="button"
-                    className="work-lightbox__arrow"
-                    aria-label="Previous"
-                    onClick={() => lightbox.go(-1)}
-                  >
-                    <ChevronLeft size={22} />
-                  </button>
-                  <span className="work-lightbox__count">
-                    {(lightbox.index ?? 0) + 1} / {shots.length}
-                  </span>
-                  <button
-                    type="button"
-                    className="work-lightbox__arrow"
-                    aria-label="Next"
-                    onClick={() => lightbox.go(1)}
-                  >
-                    <ChevronRight size={22} />
-                  </button>
-                </div>
               )}
             </Dialog.Content>
           </Dialog.Positioner>

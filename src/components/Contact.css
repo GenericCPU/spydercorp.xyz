@@ -94,12 +94,6 @@
   line-height: 1.5;
 }
 
-.contact__alert--success {
-  background: var(--accent-subtle);
-  border: 1px solid var(--accent-muted);
-  color: var(--text);
-}
-
 .contact__alert--error {
   background: rgba(227, 6, 19, 0.08);
   border: 1px solid rgba(227, 6, 19, 0.35);
