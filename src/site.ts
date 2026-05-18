@@ -7,7 +7,11 @@ export const site = {
     'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   tagline: 'Web, brand, and systems — built to fit how you actually operate.',
   email: 'brandongcryderman@gmail.com',
+  phone: '+1 902 441 1924',
+  phoneTel: '+19024411924',
   location: 'Halifax, NS',
+  announcementCallout: 'Systems built in days not weeks',
+  announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
 } as const;
 

@@ -1,0 +1,14 @@
+.site-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.site-top .header {
+  position: relative;
+  top: auto;
+  left: auto;
+  right: auto;
+}

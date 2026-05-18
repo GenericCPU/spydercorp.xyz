@@ -24,6 +24,7 @@
   --max: 1080px;
   --header-h: 3.15rem;
   --header-row-h: 2.75rem;
+  --announcement-h: 2.25rem;
   --topbar-bg: color-mix(in srgb, var(--bg) 94%, transparent);
   --topbar-bg-scrolled: color-mix(in srgb, var(--bg) 97%, transparent);
   --topbar-blur: 12px;
@@ -31,12 +32,18 @@
   --section-y: clamp(4rem, 8vw, 6rem);
   --panel-pad: clamp(1.35rem, 3.5vw, 2rem);
   --stack: 1.25rem;
-  --site-header-offset: var(--header-h);
+  --site-header-offset: calc(var(--announcement-h) + var(--header-h));
+}
+
+@media (min-width: 720px) {
+  :root {
+    --announcement-h: 2.5rem;
+  }
 }
 
 @media (max-width: 899px) {
   :root {
-    --site-header-offset: 5.65rem;
+    --site-header-offset: calc(var(--announcement-h) + 5.65rem);
   }
 }
 
