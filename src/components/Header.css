@@ -68,6 +68,7 @@
 }
 
 .header__nav {
+  position: relative;
   grid-column: 1 / -1;
   grid-row: 2;
   display: flex;
@@ -77,10 +78,23 @@
   min-width: 0;
   padding-top: 0.4rem;
   margin-top: 0.15rem;
-  border-top: 1px solid var(--border);
+  border-top: none;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
+}
+
+/* Full-bleed row divider (shell is 90% — border alone would inset the line) */
+.header__nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 100vw;
+  height: 1px;
+  transform: translateX(-50%);
+  background: var(--border);
+  pointer-events: none;
 }
 
 .header__nav::-webkit-scrollbar {
@@ -153,6 +167,10 @@
     margin-top: 0;
     border-top: none;
     overflow: visible;
+  }
+
+  .header__nav::before {
+    display: none;
   }
 
   .header__nav-link {
