@@ -1,0 +1,21 @@
+.faq__layout {
+  display: grid;
+  gap: 2.5rem;
+}
+
+@media (min-width: 900px) {
+  .faq__layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+    gap: 4rem;
+  }
+}
+
+.faq__lead {
+  margin-bottom: 0;
+}
+
+.faq__accordion {
+  padding: 0 1.5rem;
+  border-radius: var(--radius-lg);
+}

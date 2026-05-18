@@ -1,0 +1,118 @@
+.web-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.web-bg__glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.45;
+}
+
+.web-bg__glow--violet {
+  width: min(70vw, 520px);
+  height: min(70vw, 520px);
+  top: -12%;
+  left: 20%;
+  background: radial-gradient(circle, var(--violet-glow) 0%, transparent 70%);
+  animation: glow-drift 18s ease-in-out infinite alternate;
+}
+
+.web-bg__glow--cyan {
+  width: min(55vw, 400px);
+  height: min(55vw, 400px);
+  bottom: 5%;
+  right: 10%;
+  background: radial-gradient(circle, var(--cyan-glow) 0%, transparent 70%);
+  animation: glow-drift 22s ease-in-out infinite alternate-reverse;
+}
+
+.web-bg__noise {
+  position: absolute;
+  inset: 0;
+  opacity: 0.04;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+.web-bg__svg {
+  position: absolute;
+  inset: -5%;
+  width: 110%;
+  height: 110%;
+  opacity: 0.55;
+}
+
+.web-cluster--0 {
+  transform-origin: 50% 52%;
+  animation: web-breathe 14s ease-in-out infinite;
+}
+
+.web-cluster--1 {
+  opacity: 0.35;
+  transform-origin: 88% 18%;
+}
+
+.web-cluster--2 {
+  opacity: 0.28;
+  transform-origin: 12% 78%;
+}
+
+.web-thread {
+  stroke: url(#silk-fallback);
+  stroke: rgba(167, 139, 250, 0.22);
+  stroke-width: 0.12;
+  vector-effect: non-scaling-stroke;
+  animation: thread-shimmer 4s ease-in-out infinite;
+}
+
+.web-node {
+  fill: var(--cyan);
+  opacity: 0.5;
+}
+
+.web-node--hub {
+  fill: var(--silk);
+  opacity: 0.85;
+  filter: drop-shadow(0 0 4px var(--cyan-glow));
+}
+
+@keyframes glow-drift {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(3%, 4%) scale(1.08);
+  }
+}
+
+@keyframes web-breathe {
+  0%,
+  100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.02) rotate(0.4deg);
+  }
+}
+
+@keyframes thread-shimmer {
+  0%,
+  100% {
+    stroke-opacity: 0.18;
+  }
+  50% {
+    stroke-opacity: 0.38;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .web-bg__glow,
+  .web-cluster--0,
+  .web-thread {
+    animation: none;
+  }
+}
