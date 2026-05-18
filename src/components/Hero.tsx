@@ -50,6 +50,7 @@ export function Hero() {
         </div>
 
         <div className="hero__brand">
+          <p className="hero__card-label">Here&apos;s my card</p>
           <BusinessCard />
         </div>
       </div>
