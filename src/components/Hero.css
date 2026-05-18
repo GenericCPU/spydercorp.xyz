@@ -7,14 +7,14 @@
 
 .hero__grid {
   display: grid;
-  gap: 2.5rem;
+  gap: 2rem;
   align-items: center;
 }
 
 @media (min-width: 900px) {
   .hero__grid {
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 3rem 4rem;
+    gap: 2.5rem 3rem;
   }
 }
 
@@ -87,15 +87,14 @@
 .hero__brand {
   display: flex;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
   align-self: center;
+  padding: 0;
   overflow: visible;
 }
 
 @media (min-width: 900px) {
   .hero__brand {
     justify-content: flex-end;
-    align-self: center;
-    padding-top: 0.5rem;
   }
 }

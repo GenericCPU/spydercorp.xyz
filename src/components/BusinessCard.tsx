@@ -60,7 +60,7 @@ export function BusinessCard() {
                   <p className="biz-card__name">Brandon Cryderman</p>
                   <p className="biz-card__services-line">Web · Brand · Systems</p>
                   <a
-                    className="biz-card__link"
+                    className="biz-card__link biz-card__link--email"
                     href={`mailto:${site.email}`}
                     onClick={(e) => e.stopPropagation()}
                   >
