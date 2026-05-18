@@ -18,9 +18,44 @@
 
 @media (min-width: 900px) {
   .hero__grid {
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 2rem 2.5rem;
+    grid-template-columns: minmax(0, 1.28fr) minmax(17.5rem, 0.72fr);
+    gap: 2.5rem 3rem;
     align-items: start;
+  }
+
+  .hero__copy {
+    max-width: 40rem;
+    padding-right: 0.5rem;
+  }
+
+  .hero__title {
+    max-width: none;
+    font-size: clamp(2.35rem, 3.4vw, 3.4rem);
+    line-height: 1.1;
+    letter-spacing: -0.035em;
+    margin-bottom: 1.15rem;
+  }
+
+  .hero__lead {
+    max-width: none;
+    font-size: 1.2rem;
+    line-height: 1.55;
+    margin-bottom: 1rem;
+  }
+
+  .hero__sub {
+    max-width: none;
+    font-size: 1.0625rem;
+    line-height: 1.7;
+    margin-bottom: 1.75rem;
+  }
+
+  .hero__eyebrow {
+    margin-bottom: 1.15rem;
+  }
+
+  .hero__actions {
+    margin-bottom: 2.25rem;
   }
 }
 
