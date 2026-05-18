@@ -1,5 +1,6 @@
 .services__tabs {
   display: block;
+  margin-top: var(--stack);
 }
 
 .services__grid {
@@ -32,7 +33,7 @@
 }
 
 .services__card {
-  padding: 1.35rem;
+  padding: var(--panel-pad);
   background: var(--bg-card);
   border: none;
   height: 100%;

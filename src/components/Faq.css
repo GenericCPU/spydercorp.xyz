@@ -1,21 +1,20 @@
 .faq__layout {
   display: grid;
-  gap: 2.5rem;
+  gap: clamp(2rem, 4vw, 3rem);
 }
 
 @media (min-width: 900px) {
   .faq__layout {
-    grid-template-columns: 0.9fr 1.1fr;
+    grid-template-columns: minmax(240px, 0.9fr) 1.1fr;
     align-items: start;
-    gap: 4rem;
+    gap: clamp(2.5rem, 5vw, 4rem);
   }
 }
 
-.faq__lead {
+.faq__intro .section-lead {
   margin-bottom: 0;
 }
 
 .faq__accordion {
-  padding: 0 1.5rem;
-  border-radius: var(--radius-lg);
+  padding: var(--panel-pad);
 }

@@ -40,12 +40,14 @@ export function Services() {
   return (
     <section id="services" className="section services">
       <div className="container">
-        <p className="section-label">Services</p>
-        <h2 className="section-title">One studio. Full stack.</h2>
-        <p className="section-lead">
-          Marketing, design, engineering, and custom systems — not siloed vendors. From landing pages
-          to admin panels, inventory, ordering, and support: the sky&apos;s the limit.
-        </p>
+        <header className="section-header">
+          <p className="section-label">Services</p>
+          <h2 className="section-title">One studio. Full stack.</h2>
+          <p className="section-lead">
+            Marketing, design, engineering, and custom systems — not siloed vendors. From landing
+            pages to admin panels, inventory, ordering, and support: the sky&apos;s the limit.
+          </p>
+        </header>
 
         <div className="services__grid" role="list">
           {services.map((s, i) => (

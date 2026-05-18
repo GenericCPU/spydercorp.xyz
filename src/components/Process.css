@@ -17,7 +17,7 @@
 .process__step {
   display: flex;
   gap: 1rem;
-  padding: 1.25rem;
+  padding: var(--panel-pad);
   background: var(--bg);
   border: none;
   border-radius: 0;

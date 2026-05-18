@@ -5,11 +5,13 @@ export function Process() {
   return (
     <section id="process" className="section process">
       <div className="container">
-        <p className="section-label">Process</p>
-        <h2 className="section-title">From first call to live.</h2>
-        <p className="section-lead">
-          Lightweight enough for a local shop. Rigorous enough for a SaaS launch.
-        </p>
+        <header className="section-header">
+          <p className="section-label">Process</p>
+          <h2 className="section-title">From first call to live.</h2>
+          <p className="section-lead">
+            Lightweight enough for a local shop. Rigorous enough for a SaaS launch.
+          </p>
+        </header>
 
         <ol className="process__steps">
           {process.map((step) => (

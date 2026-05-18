@@ -23,6 +23,10 @@
   --font-body: 'Instrument Sans', system-ui, sans-serif;
   --max: 1080px;
   --header-h: 4rem;
+  --gutter: clamp(1.25rem, 4vw, 2rem);
+  --section-y: clamp(4rem, 8vw, 6rem);
+  --panel-pad: clamp(1.35rem, 3.5vw, 2rem);
+  --stack: 1.25rem;
 }
 
 [data-theme='light'] {
@@ -101,13 +105,24 @@ img {
 }
 
 .container {
-  width: min(var(--max), calc(100% - 2rem));
+  width: min(var(--max), 100% - 2 * var(--gutter));
   margin-inline: auto;
+  padding-inline: 0;
 }
 
 .section {
-  padding: clamp(3.5rem, 8vw, 6rem) 0;
+  padding-block: var(--section-y);
   position: relative;
+  scroll-margin-top: calc(var(--header-h) + 1rem);
+}
+
+.section-header {
+  margin-bottom: clamp(2rem, 4vw, 2.75rem);
+  max-width: 40rem;
+}
+
+.section-header .section-lead {
+  margin-bottom: 0;
 }
 
 .section-label {
@@ -178,6 +193,13 @@ img {
 .panel {
   background: var(--bg-card);
   border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+}
+
+.btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
 }
 
 .text-accent {
