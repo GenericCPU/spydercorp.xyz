@@ -73,6 +73,8 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
+  overscroll-behavior-y: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -83,11 +85,13 @@ html {
 
 body {
   margin: 0;
+  min-height: 100dvh;
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.6;
   color: var(--text);
   background: var(--bg);
+  overscroll-behavior-y: none;
   -webkit-font-smoothing: antialiased;
 }
 

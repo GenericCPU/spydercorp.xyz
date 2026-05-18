@@ -1,9 +1,11 @@
 .grid-mesh {
   position: fixed;
-  inset: 0;
+  /* Extend past viewport so rubber-band / overscroll doesn’t show a bare strip */
+  inset: -100vmax;
   z-index: 0;
   pointer-events: none;
   overflow: hidden;
+  background: var(--bg);
 }
 
 .grid-mesh__lines {

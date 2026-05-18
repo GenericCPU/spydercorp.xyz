@@ -4,6 +4,20 @@
   left: 0;
   right: 0;
   z-index: 100;
+  background: var(--bg);
+  transform: translateZ(0);
+}
+
+/* Paint above the viewport when iOS/macOS rubber-bands past the top */
+.site-top::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 100%;
+  height: 100vmax;
+  background: var(--bg);
+  pointer-events: none;
 }
 
 .site-top .header {
