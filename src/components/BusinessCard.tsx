@@ -43,13 +43,15 @@ export function BusinessCard() {
             <article className="biz-card__face biz-card__face--front" aria-hidden={flipped}>
               <div className="biz-card__accent biz-card__accent--bottom" />
               <div className="biz-card__front-body">
-                <div
-                  className="biz-card__mark biz-card__mark--front"
-                  dangerouslySetInnerHTML={{ __html: markHtml }}
-                />
-                <div className="biz-card__front-lockup">
-                  <p className="biz-card__domain">{site.domain}</p>
-                  <p className="biz-card__services-line">{PILLARS_LABEL}</p>
+                <div className="biz-card__front-brand">
+                  <div
+                    className="biz-card__mark biz-card__mark--front"
+                    dangerouslySetInnerHTML={{ __html: markHtml }}
+                  />
+                  <div className="biz-card__front-lockup">
+                    <p className="biz-card__domain">{site.domain}</p>
+                    <p className="biz-card__services-line">{PILLARS_LABEL}</p>
+                  </div>
                 </div>
                 <p className="biz-card__tagline">
                   <span>Web, brand, and systems — built to fit</span>
