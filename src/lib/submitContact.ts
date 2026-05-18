@@ -1,44 +1,27 @@
-import { site } from '../site';
+import type { ContactPayload } from '../../lib/contactServer';
 
-export type ContactPayload = {
-  name: string;
-  email: string;
-  message: string;
-  projectType: string;
-};
-
+export type { ContactPayload };
 export type SubmitResult = { ok: true } | { ok: false; error: string };
 
-/** Delivers to site.email via FormSubmit (no backend required). */
+/** Same-origin API route proxies to FormSubmit (avoids browser CORS). */
 export async function submitContactForm(payload: ContactPayload): Promise<SubmitResult> {
-  const endpoint = `https://formsubmit.co/ajax/${encodeURIComponent(site.email)}`;
-
   try {
-    const res = await fetch(endpoint, {
+    const res = await fetch('/api/contact', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        Accept: 'application/json',
-      },
-      body: JSON.stringify({
-        name: payload.name,
-        email: payload.email,
-        message: [
-          `Project type: ${payload.projectType}`,
-          '',
-          payload.message,
-        ].join('\n'),
-        _subject: `Project inquiry — ${site.brand}`,
-        _template: 'table',
-      }),
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify(payload),
     });
 
-    if (!res.ok) {
-      const text = await res.text().catch(() => '');
-      return { ok: false, error: text || `Send failed (${res.status})` };
+    const data = (await res.json().catch(() => null)) as SubmitResult | null;
+
+    if (res.ok && data?.ok) {
+      return { ok: true };
     }
 
-    return { ok: true };
+    return {
+      ok: false,
+      error: data && !data.ok ? data.error : `Send failed (${res.status})`,
+    };
   } catch {
     return { ok: false, error: 'Network error. Check your connection or email us directly.' };
   }
