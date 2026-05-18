@@ -97,7 +97,7 @@ export function BusinessCard() {
         </div>
       </button>
       <p id={hintId} className="biz-card__hint">
-        {flipped ? 'Click to show front' : 'Click to flip card'}
+        {flipped ? 'Click to show front' : 'Click to flip'}
       </p>
     </div>
   );
