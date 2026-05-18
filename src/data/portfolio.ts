@@ -16,13 +16,17 @@ export const portfolio = [
         "src": "/work/bringmebuds/Screenshot%202026-05-18%20at%206.19.49%E2%80%AFPM.png",
         "alt": "BringMeBuds.ca — Screen 1",
         "caption": "Screen 1",
-        "featured": true
+        "featured": true,
+        "width": 2322,
+        "height": 1750
       },
       {
         "src": "/work/bringmebuds/Screenshot%202026-05-18%20at%206.23.19%E2%80%AFPM.png",
         "alt": "BringMeBuds.ca — Screen 2",
         "caption": "Screen 2",
-        "featured": false
+        "featured": false,
+        "width": 1032,
+        "height": 1768
       }
     ]
   },
@@ -42,7 +46,9 @@ export const portfolio = [
         "src": "/work/handcash/Screenshot%202026-05-18%20at%206.21.02%E2%80%AFPM.png",
         "alt": "HandCash — Screen 1",
         "caption": "Screen 1",
-        "featured": true
+        "featured": true,
+        "width": 2322,
+        "height": 1750
       }
     ]
   },
@@ -62,7 +68,9 @@ export const portfolio = [
         "src": "/work/BrainrotGamez/Screenshot%202026-05-18%20at%206.18.50%E2%80%AFPM.png",
         "alt": "BrainrotGamez — Screen 1",
         "caption": "Screen 1",
-        "featured": true
+        "featured": true,
+        "width": 2100,
+        "height": 1632
       }
     ]
   },
@@ -82,7 +90,9 @@ export const portfolio = [
         "src": "/work/LilPoker/Screenshot%202026-05-18%20at%206.20.34%E2%80%AFPM.png",
         "alt": "LilPoker — Screen 1",
         "caption": "Screen 1",
-        "featured": true
+        "featured": true,
+        "width": 2322,
+        "height": 1750
       }
     ]
   },
@@ -102,13 +112,17 @@ export const portfolio = [
         "src": "/work/Soundbase.click/Screenshot%202026-05-18%20at%206.21.48%E2%80%AFPM.png",
         "alt": "Soundbase.click — Screen 1",
         "caption": "Screen 1",
-        "featured": true
+        "featured": true,
+        "width": 2752,
+        "height": 1768
       },
       {
         "src": "/work/Soundbase.click/Screenshot%202026-05-18%20at%206.22.35%E2%80%AFPM.png",
         "alt": "Soundbase.click — Screen 2",
         "caption": "Screen 2",
-        "featured": false
+        "featured": false,
+        "width": 1032,
+        "height": 1768
       }
     ]
   }

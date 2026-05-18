@@ -38,6 +38,27 @@ export const services = [
   },
 ] as const;
 
+export const studioCommitments = [
+  {
+    id: 'personal',
+    title: 'Personalized service',
+    description:
+      'You work directly with the person designing and building your project — clear communication, no account-manager relay.',
+  },
+  {
+    id: 'payment',
+    title: 'Flexible payment',
+    description:
+      'Project rate, milestone billing, retainer, trade, or donation when it fits — we structure around your cash flow, not a rigid package.',
+  },
+  {
+    id: 'probono',
+    title: 'Pro bono for local shops',
+    description:
+      'Small Halifax-area businesses with a real community need can qualify for reduced or no-cost work — ask honestly; we’ll tell you if it’s a fit.',
+  },
+] as const;
+
 export const process = [
   {
     step: '01',

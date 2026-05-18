@@ -44,7 +44,7 @@ export function Hero() {
             </div>
             <div>
               <dt>Engagement</dt>
-              <dd>Project · retainer · trade</dd>
+              <dd>Flexible pay · pro bono local</dd>
             </div>
           </dl>
         </div>

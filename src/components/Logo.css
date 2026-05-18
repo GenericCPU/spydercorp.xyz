@@ -1,3 +1,16 @@
+.logo-mark {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text);
+  line-height: 0;
+}
+
+.logo-mark svg {
+  display: block;
+  height: 1.75rem;
+  width: auto;
+}
+
 .logo-frame {
   display: inline-block;
   background: #ffffff;
@@ -17,13 +30,4 @@
 .logo-frame--full .logo-frame__img {
   width: min(17.5rem, 72vw);
   height: auto;
-}
-
-.logo-frame--compact {
-  padding: 0.2rem 0.45rem;
-}
-
-.logo-frame--compact .logo-frame__img {
-  width: auto;
-  height: 1.65rem;
 }

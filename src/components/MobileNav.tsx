@@ -1,17 +1,17 @@
 import { Dialog } from '@ark-ui/react/dialog';
 import { Portal } from '@ark-ui/react/portal';
 import { X } from 'lucide-react';
+import type { NavLink } from '../nav';
 import './MobileNav.css';
-
-export type NavLink = { href: string; label: string };
 
 interface MobileNavProps {
   open: boolean;
   onClose: () => void;
   links: NavLink[];
+  activeHref: string;
 }
 
-export function MobileNav({ open, onClose, links }: MobileNavProps) {
+export function MobileNav({ open, onClose, links, activeHref }: MobileNavProps) {
   return (
     <Dialog.Root
       open={open}
@@ -22,26 +22,35 @@ export function MobileNav({ open, onClose, links }: MobileNavProps) {
       }}
     >
       <Portal>
-        <Dialog.Backdrop className="sc-dialog-backdrop" />
-        <Dialog.Positioner className="sc-dialog-positioner">
-          <Dialog.Content className="sc-dialog-panel mobile-nav">
+        <Dialog.Backdrop className="mobile-nav-backdrop" />
+        <Dialog.Positioner className="mobile-nav-positioner">
+          <Dialog.Content className="mobile-nav-panel">
             <header className="mobile-nav__header">
               <Dialog.Title className="mobile-nav__title">Menu</Dialog.Title>
               <Dialog.CloseTrigger className="mobile-nav__close" aria-label="Close menu">
-                <X size={22} />
+                <X size={22} strokeWidth={1.75} />
               </Dialog.CloseTrigger>
             </header>
 
             <nav className="mobile-nav__links" aria-label="Mobile">
-              {links.map((l) => (
-                <a key={l.href} href={l.href} onClick={onClose}>
-                  {l.label}
-                </a>
-              ))}
+              {links.map((l) => {
+                const isActive = activeHref === l.href;
+                return (
+                  <a
+                    key={l.href}
+                    href={l.href}
+                    className={isActive ? 'is-active' : undefined}
+                    aria-current={isActive ? 'location' : undefined}
+                    onClick={onClose}
+                  >
+                    {l.label}
+                  </a>
+                );
+              })}
             </nav>
 
             <div className="mobile-nav__footer">
-              <a href="#contact" className="btn btn-primary" onClick={onClose}>
+              <a href="#contact" className="btn btn-primary mobile-nav__cta" onClick={onClose}>
                 Start a project
               </a>
             </div>

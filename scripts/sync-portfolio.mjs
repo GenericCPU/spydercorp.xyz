@@ -14,6 +14,34 @@ const outFile = path.join(root, 'src', 'data', 'portfolio.ts');
 
 const IMAGE_RE = /\.(png|jpe?g|webp)$/i;
 
+/** Read width/height from PNG or JPEG without extra deps. */
+function readImageSize(filePath) {
+  const buf = fs.readFileSync(filePath);
+  if (buf.length < 24) return null;
+
+  if (buf[0] === 0x89 && buf[1] === 0x50 && buf[2] === 0x4e && buf[3] === 0x47) {
+    return { width: buf.readUInt32BE(16), height: buf.readUInt32BE(20) };
+  }
+
+  if (buf[0] === 0xff && buf[1] === 0xd8) {
+    let offset = 2;
+    while (offset + 9 < buf.length) {
+      if (buf[offset] !== 0xff) break;
+      const marker = buf[offset + 1];
+      const len = buf.readUInt16BE(offset + 2);
+      if (marker >= 0xc0 && marker <= 0xcf && marker !== 0xc4 && marker !== 0xc8 && marker !== 0xcc) {
+        return {
+          height: buf.readUInt16BE(offset + 5),
+          width: buf.readUInt16BE(offset + 7),
+        };
+      }
+      offset += 2 + len;
+    }
+  }
+
+  return null;
+}
+
 const projectOrder = [
   'bringmebuds',
   'handcash',
@@ -110,12 +138,17 @@ function scan() {
     return {
       id: slug,
       ...meta,
-      shots: files.map((file, i) => ({
-        src: shotSrc(slug, file),
-        alt: `${meta.title} — ${captionFromFilename(file, i)}`,
-        caption: captionFromFilename(file, i),
-        featured: i === 0,
-      })),
+      shots: files.map((file, i) => {
+        const size = readImageSize(path.join(dir, file)) ?? { width: 1, height: 1 };
+        return {
+          src: shotSrc(slug, file),
+          alt: `${meta.title} — ${captionFromFilename(file, i)}`,
+          caption: captionFromFilename(file, i),
+          featured: i === 0,
+          width: size.width,
+          height: size.height,
+        };
+      }),
     };
   });
 }

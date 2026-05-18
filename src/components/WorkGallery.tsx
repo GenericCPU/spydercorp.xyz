@@ -3,6 +3,7 @@ import { Portal } from '@ark-ui/react/portal';
 import { ArrowUpRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import { portfolio, type PortfolioProject, type PortfolioShot } from '../data/portfolio';
+import { getWorkGalleryLayout } from '../lib/galleryLayout';
 import './WorkGallery.css';
 
 function useLightbox(shots: readonly PortfolioShot[]) {
@@ -41,6 +42,8 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
 
   if (!shots.length) return null;
 
+  const layout = getWorkGalleryLayout(shots);
+
   return (
     <article className="work-project panel">
       <header className="work-project__header">
@@ -70,12 +73,12 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
         </ul>
       )}
 
-      <div className="work-gallery">
+      <div className={`work-gallery work-gallery--${layout}`}>
         {shots.map((shot, i) => (
           <button
             key={shot.src}
             type="button"
-            className="work-shot"
+            className={`work-shot${shot.width >= shot.height ? ' work-shot--landscape' : ' work-shot--portrait'}`}
             onClick={() => lightbox.setIndex(i)}
           >
             <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />

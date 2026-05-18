@@ -1,20 +1,38 @@
+import markSvg from '../assets/spydercorp-mark.svg?raw';
 import './Logo.css';
 
 type LogoProps = {
-  variant?: 'full' | 'compact';
+  variant?: 'full' | 'compact' | 'mark';
   className?: string;
 };
 
-/** Uses the source PNG so the mark matches your file exactly. */
-export function Logo({ variant = 'full', className = '' }: LogoProps) {
+const markHtml = markSvg.replace(/\saria-label="[^"]*"/, ' aria-hidden="true"');
+
+function LogoMark({ variant, className }: { variant: 'compact' | 'mark'; className: string }) {
   return (
-    <span className={`logo-frame logo-frame--${variant} ${className}`.trim()}>
+    <span
+      className={`logo-mark logo-mark--${variant} ${className}`.trim()}
+      role="img"
+      aria-label="spydercorp"
+      dangerouslySetInnerHTML={{ __html: markHtml }}
+    />
+  );
+}
+
+/** Full lockup (PNG). Header uses vector mark only — no wordmark. */
+export function Logo({ variant = 'full', className = '' }: LogoProps) {
+  if (variant === 'mark' || variant === 'compact') {
+    return <LogoMark variant="mark" className={className} />;
+  }
+
+  return (
+    <span className={`logo-frame logo-frame--full ${className}`.trim()}>
       <img
         src="/logo/spydercorp.png"
         alt="spydercorp"
         className="logo-frame__img"
-        width={variant === 'compact' ? 120 : 320}
-        height={variant === 'compact' ? 40 : 100}
+        width={320}
+        height={100}
       />
     </span>
   );

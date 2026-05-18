@@ -1,25 +1,20 @@
 import { useEffect, useState } from 'react';
 import { Menu, Moon, Sun } from 'lucide-react';
+import { useActiveSection } from '../hooks/useActiveSection';
+import { navLinks, navSectionIds } from '../nav';
 import { Logo } from './Logo';
 import { useTheme } from '../theme/ThemeContext';
-import { MobileNav, type NavLink } from './MobileNav';
+import { MobileNav } from './MobileNav';
 import './Header.css';
-
-const links: NavLink[] = [
-  { href: '#services', label: 'Services' },
-  { href: '#work', label: 'Work' },
-  { href: '#process', label: 'Process' },
-  { href: '#faq', label: 'FAQ' },
-  { href: '#contact', label: 'Contact' },
-];
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
   const { isDark, toggleTheme } = useTheme();
+  const activeHref = useActiveSection(navSectionIds, 100);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => setScrolled(window.scrollY > 4);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -28,45 +23,59 @@ export function Header() {
   return (
     <>
       <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
-        <div className="container header__inner">
-          <a href="#" className="header__logo">
-            <Logo variant="compact" />
-          </a>
+        <div className="header__bar">
+          <div className="header__left">
+            <button
+              type="button"
+              className="header__icon-btn header__menu-btn"
+              aria-label="Open menu"
+              onClick={() => setNavOpen(true)}
+            >
+              <Menu size={20} strokeWidth={1.75} />
+            </button>
+            <a href="#" className="header__logo" aria-label="spydercorp home">
+              <Logo variant="mark" />
+            </a>
+          </div>
 
           <nav className="header__nav" aria-label="Primary">
-            {links.map((l) => (
-              <a key={l.href} href={l.href}>
-                {l.label}
-              </a>
-            ))}
+            {navLinks.map((l) => {
+              const isActive = activeHref === l.href;
+              return (
+                <a
+                  key={l.href}
+                  href={l.href}
+                  className={`header__nav-link${isActive ? ' is-active' : ''}`}
+                  aria-current={isActive ? 'location' : undefined}
+                >
+                  {l.label}
+                </a>
+              );
+            })}
           </nav>
 
-          <div className="header__actions">
+          <div className="header__utilities">
             <button
               type="button"
               className="header__icon-btn"
               aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
               onClick={toggleTheme}
             >
-              {isDark ? <Sun size={18} strokeWidth={1.75} /> : <Moon size={18} strokeWidth={1.75} />}
+              {isDark ? <Sun size={20} strokeWidth={1.75} /> : <Moon size={20} strokeWidth={1.75} />}
             </button>
             <a href="#contact" className="btn btn-primary header__cta">
               Start a project
             </a>
           </div>
-
-          <button
-            type="button"
-            className="header__menu-btn"
-            aria-label="Open menu"
-            onClick={() => setNavOpen(true)}
-          >
-            <Menu size={20} strokeWidth={1.75} />
-          </button>
         </div>
       </header>
 
-      <MobileNav open={navOpen} onClose={() => setNavOpen(false)} links={links} />
+      <MobileNav
+        open={navOpen}
+        onClose={() => setNavOpen(false)}
+        links={navLinks}
+        activeHref={activeHref}
+      />
     </>
   );
 }

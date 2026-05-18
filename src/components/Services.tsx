@@ -1,6 +1,6 @@
 import { Tabs } from '@ark-ui/react/tabs';
-import { Code2, Megaphone, Palette, Server } from 'lucide-react';
-import { services } from '../site';
+import { Check, Code2, HandHeart, HandCoins, Megaphone, Palette, Server, UserRound } from 'lucide-react';
+import { services, studioCommitments } from '../site';
 import './Services.css';
 
 const icons = {
@@ -8,6 +8,12 @@ const icons = {
   design: Palette,
   engineering: Code2,
   systems: Server,
+} as const;
+
+const commitmentIcons = {
+  personal: UserRound,
+  payment: HandCoins,
+  probono: HandHeart,
 } as const;
 
 function ServiceCard({
@@ -22,14 +28,19 @@ function ServiceCard({
 
   return (
     <article className={`services__card panel services__card--${index}`}>
-      <div className="services__icon">
-        <Icon size={22} strokeWidth={1.75} aria-hidden />
-      </div>
-      <h3>{s.title}</h3>
+      <header className="services__card-head">
+        <span className="services__icon" aria-hidden>
+          <Icon size={20} strokeWidth={2.25} />
+        </span>
+        <h3>{s.title}</h3>
+      </header>
       <p>{s.description}</p>
       <ul>
         {s.highlights.map((h) => (
-          <li key={h}>{h}</li>
+          <li key={h}>
+            <Check size={14} strokeWidth={2.5} aria-hidden />
+            {h}
+          </li>
         ))}
       </ul>
     </article>
@@ -44,10 +55,30 @@ export function Services() {
           <p className="section-label">Services</p>
           <h2 className="section-title">One studio. Full stack.</h2>
           <p className="section-lead">
-            Marketing, design, engineering, and custom systems — not siloed vendors. From landing
-            pages to admin panels, inventory, ordering, and support: the sky&apos;s the limit.
+            Marketing, design, engineering, and custom systems — not siloed vendors. We work with
+            you one-on-one, with payment that fits your business, including pro bono support for
+            qualifying local shops.
           </p>
         </header>
+
+        <div className="services__commitments panel" role="list">
+          {studioCommitments.map((c) => {
+            const Icon = commitmentIcons[c.id];
+            return (
+              <div key={c.id} className="services__commitment" role="listitem">
+                <span className="services__commitment-icon" aria-hidden>
+                  <Icon size={18} strokeWidth={2.25} />
+                </span>
+                <div>
+                  <h3>{c.title}</h3>
+                  <p>{c.description}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        <p className="services__grid-label">What we build</p>
 
         <div className="services__grid" role="list">
           {services.map((s, i) => (
