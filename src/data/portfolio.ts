@@ -13,27 +13,101 @@ export const portfolio = [
     ],
     "shots": [
       {
-        "src": "/work/bringmebuds/01-home-desktop.png",
-        "alt": "BringMeBuds.ca — Home Desktop",
-        "caption": "Home Desktop",
+        "src": "/work/bringmebuds/Screenshot%202026-05-18%20at%206.19.49%E2%80%AFPM.png",
+        "alt": "BringMeBuds.ca — Screen 1",
+        "caption": "Screen 1",
         "featured": true
       },
       {
-        "src": "/work/bringmebuds/02-shop-desktop.png",
-        "alt": "BringMeBuds.ca — Shop Desktop",
-        "caption": "Shop Desktop",
+        "src": "/work/bringmebuds/Screenshot%202026-05-18%20at%206.23.19%E2%80%AFPM.png",
+        "alt": "BringMeBuds.ca — Screen 2",
+        "caption": "Screen 2",
         "featured": false
+      }
+    ]
+  },
+  {
+    "id": "handcash",
+    "title": "HandCash",
+    "category": "Bitcoin wallet · Payments",
+    "url": "https://handcash.io",
+    "description": "Wallet and payments product UI — consumer fintech flows built for clarity and speed.",
+    "tags": [
+      "Product UI",
+      "Fintech",
+      "Engineering"
+    ],
+    "shots": [
+      {
+        "src": "/work/handcash/Screenshot%202026-05-18%20at%206.21.02%E2%80%AFPM.png",
+        "alt": "HandCash — Screen 1",
+        "caption": "Screen 1",
+        "featured": true
+      }
+    ]
+  },
+  {
+    "id": "BrainrotGamez",
+    "title": "BrainrotGamez",
+    "category": "Games · Web",
+    "url": "",
+    "description": "Playful game storefront and discovery experience with bold visuals and fast browse-to-play paths.",
+    "tags": [
+      "Games",
+      "Web design",
+      "Engineering"
+    ],
+    "shots": [
+      {
+        "src": "/work/BrainrotGamez/Screenshot%202026-05-18%20at%206.18.50%E2%80%AFPM.png",
+        "alt": "BrainrotGamez — Screen 1",
+        "caption": "Screen 1",
+        "featured": true
+      }
+    ]
+  },
+  {
+    "id": "LilPoker",
+    "title": "LilPoker",
+    "category": "Games · Web",
+    "url": "",
+    "description": "Poker product interface — table-ready layouts and focused player flows.",
+    "tags": [
+      "Games",
+      "UI/UX",
+      "Engineering"
+    ],
+    "shots": [
+      {
+        "src": "/work/LilPoker/Screenshot%202026-05-18%20at%206.20.34%E2%80%AFPM.png",
+        "alt": "LilPoker — Screen 1",
+        "caption": "Screen 1",
+        "featured": true
+      }
+    ]
+  },
+  {
+    "id": "Soundbase.click",
+    "title": "Soundbase.click",
+    "category": "Audio · Web",
+    "url": "https://soundbase.click",
+    "description": "Music/audio platform UI — discovery, playback, and creator-facing surfaces.",
+    "tags": [
+      "Audio",
+      "Web app",
+      "Design"
+    ],
+    "shots": [
+      {
+        "src": "/work/Soundbase.click/Screenshot%202026-05-18%20at%206.21.48%E2%80%AFPM.png",
+        "alt": "Soundbase.click — Screen 1",
+        "caption": "Screen 1",
+        "featured": true
       },
       {
-        "src": "/work/bringmebuds/03-shop-mobile.png",
-        "alt": "BringMeBuds.ca — Shop Mobile",
-        "caption": "Shop Mobile",
-        "featured": false
-      },
-      {
-        "src": "/work/bringmebuds/04-product-desktop.png",
-        "alt": "BringMeBuds.ca — Product Desktop",
-        "caption": "Product Desktop",
+        "src": "/work/Soundbase.click/Screenshot%202026-05-18%20at%206.22.35%E2%80%AFPM.png",
+        "alt": "Soundbase.click — Screen 2",
+        "caption": "Screen 2",
         "featured": false
       }
     ]

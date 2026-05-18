@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 /**
  * Scans public/work/<project>/*.{png,jpg,jpeg,webp} and writes src/data/portfolio.ts
- * Drop screenshots into public/work/<project-slug>/ then run: node scripts/sync-portfolio.mjs
+ * Drop screenshots into public/work/<project-slug>/ then run: npm run portfolio:sync
  */
 import fs from 'node:fs';
 import path from 'node:path';
@@ -14,6 +14,14 @@ const outFile = path.join(root, 'src', 'data', 'portfolio.ts');
 
 const IMAGE_RE = /\.(png|jpe?g|webp)$/i;
 
+const projectOrder = [
+  'bringmebuds',
+  'handcash',
+  'BrainrotGamez',
+  'LilPoker',
+  'Soundbase.click',
+];
+
 const projectMeta = {
   bringmebuds: {
     title: 'BringMeBuds.ca',
@@ -23,14 +31,49 @@ const projectMeta = {
       'Full shop rebuild — browse, cart, coupons, delivery logic. Mobile-first UX designed to reduce friction and complete more orders.',
     tags: ['E-commerce UX', 'Brand', 'Engineering'],
   },
+  handcash: {
+    title: 'HandCash',
+    category: 'Bitcoin wallet · Payments',
+    url: 'https://handcash.io',
+    description: 'Wallet and payments product UI — consumer fintech flows built for clarity and speed.',
+    tags: ['Product UI', 'Fintech', 'Engineering'],
+  },
+  BrainrotGamez: {
+    title: 'BrainrotGamez',
+    category: 'Games · Web',
+    url: '',
+    description: 'Playful game storefront and discovery experience with bold visuals and fast browse-to-play paths.',
+    tags: ['Games', 'Web design', 'Engineering'],
+  },
+  LilPoker: {
+    title: 'LilPoker',
+    category: 'Games · Web',
+    url: '',
+    description: 'Poker product interface — table-ready layouts and focused player flows.',
+    tags: ['Games', 'UI/UX', 'Engineering'],
+  },
+  'Soundbase.click': {
+    title: 'Soundbase.click',
+    category: 'Audio · Web',
+    url: 'https://soundbase.click',
+    description: 'Music/audio platform UI — discovery, playback, and creator-facing surfaces.',
+    tags: ['Audio', 'Web app', 'Design'],
+  },
 };
 
-function titleFromFilename(file) {
-  return file
-    .replace(/^\d+-/, '')
+function captionFromFilename(file, index) {
+  const stripped = file
+    .replace(/^Screenshot\s+/i, '')
     .replace(/\.(png|jpe?g|webp)$/i, '')
-    .replace(/-/g, ' ')
-    .replace(/\b\w/g, (c) => c.toUpperCase());
+    .trim();
+  if (/^\d{4}-\d{2}-\d{2}/.test(stripped)) {
+    return `Screen ${index + 1}`;
+  }
+  return stripped.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()) || `Screen ${index + 1}`;
+}
+
+function shotSrc(slug, file) {
+  return `/work/${encodeURIComponent(slug)}/${file.split('/').map(encodeURIComponent).join('/')}`;
 }
 
 function scan() {
@@ -39,13 +82,17 @@ function scan() {
     return [];
   }
 
-  const projects = fs
+  const dirs = fs
     .readdirSync(workDir, { withFileTypes: true })
     .filter((d) => d.isDirectory())
-    .map((d) => d.name)
-    .sort();
+    .map((d) => d.name);
 
-  return projects.map((slug) => {
+  const sorted = [
+    ...projectOrder.filter((id) => dirs.includes(id)),
+    ...dirs.filter((id) => !projectOrder.includes(id)).sort(),
+  ];
+
+  return sorted.map((slug) => {
     const dir = path.join(workDir, slug);
     const files = fs
       .readdirSync(dir)
@@ -53,7 +100,7 @@ function scan() {
       .sort();
 
     const meta = projectMeta[slug] ?? {
-      title: slug.replace(/-/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
+      title: slug.replace(/[.-]/g, ' ').replace(/\b\w/g, (c) => c.toUpperCase()),
       category: 'Client project',
       url: '',
       description: '',
@@ -64,9 +111,9 @@ function scan() {
       id: slug,
       ...meta,
       shots: files.map((file, i) => ({
-        src: `/work/${slug}/${file}`,
-        alt: `${meta.title} — ${titleFromFilename(file)}`,
-        caption: titleFromFilename(file),
+        src: shotSrc(slug, file),
+        alt: `${meta.title} — ${captionFromFilename(file, i)}`,
+        caption: captionFromFilename(file, i),
         featured: i === 0,
       })),
     };
@@ -84,4 +131,6 @@ export type PortfolioShot = PortfolioProject['shots'][number];
 
 fs.mkdirSync(path.dirname(outFile), { recursive: true });
 fs.writeFileSync(outFile, ts);
-console.log(`Wrote ${projects.length} project(s), ${projects.reduce((n, p) => n + p.shots.length, 0)} shot(s) → ${path.relative(root, outFile)}`);
+console.log(
+  `Wrote ${projects.length} project(s), ${projects.reduce((n, p) => n + p.shots.length, 0)} shot(s) → ${path.relative(root, outFile)}`,
+);

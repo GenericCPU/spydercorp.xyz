@@ -36,9 +36,15 @@ function useLightbox(shots: readonly PortfolioShot[]) {
 }
 
 function ProjectGallery({ project }: { project: PortfolioProject }) {
-  const { shots } = project;
-  const featured = shots.find((s) => s.featured) ?? shots[0];
-  const rest = shots.filter((s) => s !== featured);
+  const shots = [...project.shots];
+  const featuredIndex = Math.max(
+    0,
+    shots.findIndex((s) => s.featured),
+  );
+  const featured = shots[featuredIndex];
+  const rest = shots
+    .map((shot, i) => ({ shot, i }))
+    .filter(({ i }) => i !== featuredIndex);
   const lightbox = useLightbox(shots);
 
   if (!shots.length) return null;
@@ -77,18 +83,18 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
           <button
             type="button"
             className="work-shot work-shot--featured"
-            onClick={() => lightbox.setIndex(shots.indexOf(featured))}
+            onClick={() => lightbox.setIndex(featuredIndex)}
           >
             <img src={featured.src} alt={featured.alt} loading="lazy" decoding="async" />
             <span className="work-shot__caption">{featured.caption}</span>
           </button>
         )}
-        {rest.map((shot) => (
+        {rest.map(({ shot, i }) => (
           <button
             key={shot.src}
             type="button"
             className="work-shot"
-            onClick={() => lightbox.setIndex(shots.indexOf(shot))}
+            onClick={() => lightbox.setIndex(i)}
           >
             <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
             <span className="work-shot__caption">{shot.caption}</span>
