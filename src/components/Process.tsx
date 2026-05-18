@@ -13,7 +13,7 @@ export function Process() {
 
         <ol className="process__steps">
           {process.map((step) => (
-            <li key={step.step} className="process__step glass">
+            <li key={step.step} className="process__step panel">
               <span className="process__num">{step.step}</span>
               <div>
                 <h3>{step.title}</h3>

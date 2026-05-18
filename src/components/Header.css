@@ -5,17 +5,13 @@
   right: 0;
   z-index: 100;
   height: var(--header-h);
-  transition:
-    background 0.3s ease,
-    border-color 0.3s ease,
-    backdrop-filter 0.3s ease;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, background 0.2s ease;
 }
 
 .header--scrolled {
-  background: rgba(5, 5, 6, 0.78);
-  border-bottom: 1px solid var(--border);
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
+  background: rgba(10, 10, 10, 0.92);
+  border-bottom-color: var(--border);
 }
 
 .header__inner {
@@ -28,56 +24,40 @@
 .header__logo {
   display: flex;
   align-items: center;
-  gap: 0.75rem;
+  gap: 0.65rem;
   margin-right: auto;
 }
 
-.header__logo strong {
-  display: block;
+.header__wordmark {
+  display: none;
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
-.header__logo small {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  letter-spacing: 0.04em;
+.header__wordmark strong {
+  font-weight: 700;
 }
 
-.header__mark {
-  width: 2rem;
-  height: 2rem;
-  border-radius: 8px;
-  background:
-    linear-gradient(135deg, var(--silk-dim), var(--cyan)),
-    var(--bg-elevated);
-  box-shadow: 0 0 20px var(--violet-glow);
-  position: relative;
-}
-
-.header__mark::after {
-  content: '';
-  position: absolute;
-  inset: 6px;
-  border: 1px solid rgba(255, 255, 255, 0.35);
-  border-radius: 4px;
-  transform: rotate(45deg);
+@media (min-width: 480px) {
+  .header__wordmark {
+    display: inline-flex;
+    gap: 0;
+  }
 }
 
 .header__nav {
   display: none;
   align-items: center;
-  gap: 2rem;
+  gap: 1.75rem;
 }
 
 .header__nav a {
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   font-weight: 500;
   color: var(--text-muted);
-  transition: color 0.2s;
+  transition: color 0.15s;
 }
 
 .header__nav a:hover {
@@ -86,19 +66,19 @@
 
 .header__cta {
   display: none;
-  padding: 0.6rem 1.15rem;
-  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
 }
 
 .header__menu-btn {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 2.25rem;
+  height: 2.25rem;
   border: 1px solid var(--border);
-  border-radius: 10px;
-  background: rgba(255, 255, 255, 0.03);
+  border-radius: var(--radius);
+  background: transparent;
   color: var(--text);
 }
 

@@ -1,6 +1,6 @@
 export const site = {
   domain: 'spidercorp.xyz',
-  brand: 'SpiderCorp',
+  brand: 'spydercorp',
   tagline: 'We spin digital presence into foot traffic.',
   email: 'hello@spidercorp.xyz',
   location: 'Halifax, NS',

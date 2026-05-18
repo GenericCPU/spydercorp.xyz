@@ -50,7 +50,7 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
   if (!shots.length) return null;
 
   return (
-    <article className="work-project glass">
+    <article className="work-project panel">
       <header className="work-project__header">
         <div>
           <span className="work-project__category">{project.category}</span>

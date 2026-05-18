@@ -15,7 +15,7 @@ export function Faq() {
           </p>
         </div>
 
-        <Accordion.Root className="faq__accordion glass" collapsible multiple>
+        <Accordion.Root className="faq__accordion panel" collapsible multiple>
           {faq.map((item) => (
             <Accordion.Item key={item.id} value={item.id} className="sc-accordion-item">
               <Accordion.ItemTrigger className="sc-accordion-trigger">

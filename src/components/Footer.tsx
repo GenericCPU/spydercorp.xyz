@@ -10,7 +10,9 @@ export function Footer() {
         <p>
           © {year} {site.brand} · {site.domain}
         </p>
-        <p className="footer__tag">Marketing · Web design · Full-stack engineering</p>
+        <p className="footer__tag">
+          <span className="text-accent">corp</span> · marketing · web · engineering
+        </p>
       </div>
     </footer>
   );

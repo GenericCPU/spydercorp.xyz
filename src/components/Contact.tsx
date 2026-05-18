@@ -32,10 +32,10 @@ export function Contact() {
   return (
     <section id="contact" className="section contact">
       <div className="container">
-        <div className="contact__panel glass">
+        <div className="contact__panel panel">
           <div className="contact__copy">
             <p className="section-label">Contact</p>
-            <h2 className="section-title">Spin something together.</h2>
+            <h2 className="section-title">Start a thread.</h2>
             <p className="section-lead contact__lead">
               New builds, redesigns, and local partnerships welcome. Flexible on budget — project
               rate, retainer, donation, or trade.

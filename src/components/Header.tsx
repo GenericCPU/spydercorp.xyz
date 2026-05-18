@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu } from 'lucide-react';
-import { site } from '../site';
+import { Logo } from './Logo';
 import { MobileNav, type NavLink } from './MobileNav';
 import './Header.css';
 
@@ -17,7 +17,7 @@ export function Header() {
   const [navOpen, setNavOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 24);
+    const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener('scroll', onScroll, { passive: true });
     return () => window.removeEventListener('scroll', onScroll);
@@ -28,10 +28,10 @@ export function Header() {
       <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
         <div className="container header__inner">
           <a href="#" className="header__logo">
-            <span className="header__mark" aria-hidden />
-            <span>
-              <strong>{site.brand}</strong>
-              <small>{site.domain}</small>
+            <Logo variant="mark" theme="dark" />
+            <span className="header__wordmark">
+              <strong>spyder</strong>
+              <strong className="text-accent">corp</strong>
             </span>
           </a>
 
@@ -53,7 +53,7 @@ export function Header() {
             aria-label="Open menu"
             onClick={() => setNavOpen(true)}
           >
-            <Menu size={22} />
+            <Menu size={20} strokeWidth={1.75} />
           </button>
         </div>
       </header>

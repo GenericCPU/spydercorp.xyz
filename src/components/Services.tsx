@@ -20,7 +20,7 @@ function ServiceCard({
   const Icon = icons[s.id];
 
   return (
-    <article className={`services__card glass services__card--${index}`}>
+    <article className={`services__card panel services__card--${index}`}>
       <div className="services__icon">
         <Icon size={22} strokeWidth={1.75} aria-hidden />
       </div>
