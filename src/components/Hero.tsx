@@ -26,7 +26,7 @@ export function Hero() {
           <div className="hero__actions">
             <a href="#contact" className="btn btn-primary">
               Start a project
-              <ArrowRight size={13} strokeWidth={2} aria-hidden />
+              <ArrowRight size={15} strokeWidth={2} aria-hidden />
             </a>
             <a href="#work" className="btn btn-ghost">
               View work

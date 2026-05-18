@@ -55,6 +55,14 @@
   gap: 0.4rem;
 }
 
+/* Match tag chips in the meta row only */
+.work-project__link.btn {
+  padding: 0.28rem 0.55rem;
+  font-size: 0.72rem;
+  line-height: 1.2;
+  gap: 0.35rem;
+}
+
 .work-project__link {
   flex-shrink: 0;
   white-space: nowrap;

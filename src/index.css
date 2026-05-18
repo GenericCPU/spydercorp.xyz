@@ -174,9 +174,8 @@ img {
   line-height: 1.65;
 }
 
-/* Chip scale — shared by tags, buttons, compact CTAs */
-.chip,
-.btn {
+/* Portfolio tags — compact chip scale */
+.chip {
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -188,14 +187,25 @@ img {
   line-height: 1.2;
   letter-spacing: 0.02em;
   border: 1px solid var(--border);
+  color: var(--text-muted);
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+  font-size: 0.85rem;
+  line-height: 1.25;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--border);
   transition:
     background 0.15s ease,
     border-color 0.15s ease,
     color 0.15s ease;
-}
-
-.chip {
-  color: var(--text-muted);
 }
 
 .btn-primary {
