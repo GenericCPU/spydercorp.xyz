@@ -22,8 +22,8 @@
   --font-display: 'Syne', system-ui, sans-serif;
   --font-body: 'Instrument Sans', system-ui, sans-serif;
   --max: 1080px;
-  --header-h: 3.5rem;
-  --header-row-h: 3.25rem;
+  --header-h: 3.15rem;
+  --header-row-h: 2.75rem;
   --topbar-bg: color-mix(in srgb, var(--bg) 94%, transparent);
   --topbar-bg-scrolled: color-mix(in srgb, var(--bg) 97%, transparent);
   --topbar-blur: 12px;
@@ -36,7 +36,7 @@
 
 @media (max-width: 899px) {
   :root {
-    --site-header-offset: 6.35rem;
+    --site-header-offset: 5.65rem;
   }
 }
 

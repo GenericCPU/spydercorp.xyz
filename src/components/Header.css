@@ -28,7 +28,7 @@
   grid-template-rows: var(--header-row-h) auto auto;
   align-items: center;
   column-gap: 0.75rem;
-  padding-block: 0.35rem 0.45rem;
+  padding-block: 0.22rem 0.32rem;
 }
 
 .header__brand {
@@ -86,7 +86,7 @@
   justify-content: space-between;
   gap: clamp(0.35rem, 2vw, 0.75rem);
   min-width: 0;
-  padding-top: 0.4rem;
+  padding-top: 0.28rem;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -103,7 +103,7 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
   text-decoration: none;
-  padding: 0.2rem 0;
+  padding: 0.12rem 0;
   white-space: nowrap;
   flex-shrink: 0;
   transition: color 0.2s ease;
@@ -118,9 +118,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 34px;
-  min-height: 34px;
-  padding: 0.35rem;
+  min-width: 30px;
+  min-height: 30px;
+  padding: 0.28rem;
   border: none;
   background: none;
   color: var(--text);
@@ -169,7 +169,7 @@
   .header__nav-link {
     font-size: 0.75rem;
     letter-spacing: 0.1em;
-    padding: 0.5rem 0;
+    padding: 0.35rem 0;
   }
 
   .header__utilities {
@@ -181,8 +181,8 @@
   .header__cta {
     display: inline-flex;
     margin-left: 0.35rem;
-    padding: 0.42rem 0.95rem;
-    font-size: 0.7rem;
+    padding: 0.34rem 0.85rem;
+    font-size: 0.68rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
@@ -191,9 +191,9 @@
   }
 
   .header__icon-btn {
-    min-width: 36px;
-    min-height: 36px;
-    padding: 0.4rem;
+    min-width: 32px;
+    min-height: 32px;
+    padding: 0.3rem;
   }
 }
 
