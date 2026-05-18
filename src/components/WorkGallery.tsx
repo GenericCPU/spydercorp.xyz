@@ -52,31 +52,33 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
   return (
     <article className="work-project panel">
       <header className="work-project__header">
-        <div>
-          <span className="work-project__category">{project.category}</span>
-          <h3>{project.title}</h3>
-          {project.description ? <p>{project.description}</p> : null}
-        </div>
-        {project.url ? (
-          <a
-            href={project.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn btn-ghost work-project__link"
-          >
-            Live site
-            <ArrowUpRight size={16} strokeWidth={2} aria-hidden />
-          </a>
-        ) : null}
+        <span className="work-project__category">{project.category}</span>
+        <h3>{project.title}</h3>
+        {project.description ? <p>{project.description}</p> : null}
       </header>
 
-      {project.tags.length > 0 && (
-        <ul className="work-project__tags">
-          {project.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
-      )}
+      {project.tags.length > 0 || project.url ? (
+        <div className="work-project__meta">
+          {project.tags.length > 0 ? (
+            <ul className="work-project__tags">
+              {project.tags.map((tag) => (
+                <li key={tag}>{tag}</li>
+              ))}
+            </ul>
+          ) : null}
+          {project.url ? (
+            <a
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn btn-ghost work-project__link"
+            >
+              Visit site
+              <ArrowUpRight size={16} strokeWidth={2} aria-hidden />
+            </a>
+          ) : null}
+        </div>
+      ) : null}
 
       <div className={`work-gallery work-gallery--${layout}`}>
         {shots.map((shot, i) => (
