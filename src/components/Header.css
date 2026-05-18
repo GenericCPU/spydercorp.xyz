@@ -123,9 +123,9 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 40px;
-  min-height: 40px;
-  padding: 0.45rem;
+  min-width: 34px;
+  min-height: 34px;
+  padding: 0.35rem;
   border: none;
   background: none;
   color: var(--text);
@@ -188,18 +188,19 @@
   .header__cta {
     display: inline-flex;
     margin-left: 0.35rem;
-    padding: 0.55rem 1.1rem;
-    font-size: 0.72rem;
+    padding: 0.42rem 0.95rem;
+    font-size: 0.7rem;
     font-weight: 600;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    line-height: 1.2;
     border-radius: var(--radius);
   }
 
   .header__icon-btn {
-    min-width: 44px;
-    min-height: 44px;
-    padding: 0.5rem;
+    min-width: 36px;
+    min-height: 36px;
+    padding: 0.4rem;
   }
 }
 

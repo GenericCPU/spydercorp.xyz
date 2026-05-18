@@ -50,7 +50,7 @@ export function Header() {
             aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
             onClick={toggleTheme}
           >
-            {isDark ? <Sun size={20} strokeWidth={1.75} /> : <Moon size={20} strokeWidth={1.75} />}
+            {isDark ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}
           </button>
           <a href="#contact" className="btn btn-primary header__cta">
             Start a project
