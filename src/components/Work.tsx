@@ -8,8 +8,7 @@ export function Work() {
         <p className="section-label">Selected work</p>
         <h2 className="section-title">Built to convert.</h2>
         <p className="section-lead">
-          Real projects for local businesses — browse the UI, then open the live site. Tap any
-          screenshot to expand.
+          Real client UIs — full frames, nothing cropped. Tap any shot to expand.
         </p>
 
         <WorkGallery />

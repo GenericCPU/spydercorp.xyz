@@ -9,6 +9,18 @@
   border: 1px solid var(--border);
 }
 
+@media (min-width: 640px) {
+  .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .services__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 @media (min-width: 768px) {
   .services__tabs {
     display: none;
@@ -16,20 +28,14 @@
 
   .services__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 .services__card {
-  padding: 1.5rem;
-  background: var(--bg);
+  padding: 1.35rem;
+  background: var(--bg-card);
   border: none;
-  border-radius: 0;
-  transition: background 0.15s ease;
-}
-
-.services__card:hover {
-  background: var(--bg-elevated);
+  height: 100%;
 }
 
 .services__icon {
@@ -39,21 +45,22 @@
   width: 2.25rem;
   height: 2.25rem;
   border: 1px solid var(--border);
-  color: var(--text);
+  color: var(--accent);
   margin-bottom: 1rem;
 }
 
 .services__card h3 {
   font-family: var(--font-display);
-  font-size: 1.1rem;
+  font-size: 1.05rem;
   font-weight: 700;
-  margin: 0 0 0.65rem;
+  margin: 0 0 0.6rem;
 }
 
 .services__card > p {
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   margin: 0 0 1rem;
+  line-height: 1.55;
 }
 
 .services__card ul {
@@ -63,7 +70,7 @@
 }
 
 .services__card li {
-  font-size: 0.82rem;
+  font-size: 0.8rem;
   color: var(--text-muted);
   padding: 0.35rem 0;
   border-top: 1px solid var(--border);

@@ -1,5 +1,5 @@
 import { Tabs } from '@ark-ui/react/tabs';
-import { Megaphone, Palette, Code2 } from 'lucide-react';
+import { Code2, Megaphone, Palette, Server } from 'lucide-react';
 import { services } from '../site';
 import './Services.css';
 
@@ -7,6 +7,7 @@ const icons = {
   brand: Megaphone,
   design: Palette,
   engineering: Code2,
+  systems: Server,
 } as const;
 
 function ServiceCard({
@@ -40,10 +41,10 @@ export function Services() {
     <section id="services" className="section services">
       <div className="container">
         <p className="section-label">Services</p>
-        <h2 className="section-title">One studio. Three threads.</h2>
+        <h2 className="section-title">One studio. Full stack.</h2>
         <p className="section-lead">
-          Most shops hire a marketer, a designer, and a developer who never talk. We spin all three
-          into a single, tight web.
+          Marketing, design, engineering, and custom systems — not siloed vendors. From landing pages
+          to admin panels, inventory, ordering, and support: the sky&apos;s the limit.
         </p>
 
         <div className="services__grid" role="list">

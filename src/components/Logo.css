@@ -1,26 +1,29 @@
-.logo {
+.logo-frame {
+  display: inline-block;
+  background: #ffffff;
+  line-height: 0;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.logo-frame__img {
   display: block;
+  width: auto;
   height: auto;
-  object-fit: contain;
+  max-width: 100%;
 }
 
-.logo--mark {
-  width: 2rem;
-  height: 2rem;
-}
-
-.logo--full {
-  width: auto;
-  max-width: 11rem;
-  height: 2rem;
-}
-
-.logo--png {
-  width: auto;
-  max-width: min(320px, 72vw);
+.logo-frame--full .logo-frame__img {
+  width: min(17.5rem, 72vw);
   height: auto;
 }
 
-.hero .logo--png {
-  max-width: min(380px, 88vw);
+.logo-frame--compact {
+  padding: 0.2rem 0.45rem;
+}
+
+.logo-frame--compact .logo-frame__img {
+  width: auto;
+  height: 1.65rem;
 }

@@ -37,14 +37,6 @@ function useLightbox(shots: readonly PortfolioShot[]) {
 
 function ProjectGallery({ project }: { project: PortfolioProject }) {
   const shots = [...project.shots];
-  const featuredIndex = Math.max(
-    0,
-    shots.findIndex((s) => s.featured),
-  );
-  const featured = shots[featuredIndex];
-  const rest = shots
-    .map((shot, i) => ({ shot, i }))
-    .filter(({ i }) => i !== featuredIndex);
   const lightbox = useLightbox(shots);
 
   if (!shots.length) return null;
@@ -78,18 +70,8 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
         </ul>
       )}
 
-      <div className={`work-gallery work-gallery--${Math.min(rest.length, 3)}`}>
-        {featured && (
-          <button
-            type="button"
-            className="work-shot work-shot--featured"
-            onClick={() => lightbox.setIndex(featuredIndex)}
-          >
-            <img src={featured.src} alt={featured.alt} loading="lazy" decoding="async" />
-            <span className="work-shot__caption">{featured.caption}</span>
-          </button>
-        )}
-        {rest.map(({ shot, i }) => (
+      <div className="work-gallery">
+        {shots.map((shot, i) => (
           <button
             key={shot.src}
             type="button"

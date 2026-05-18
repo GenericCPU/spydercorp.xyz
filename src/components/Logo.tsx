@@ -1,40 +1,21 @@
 import './Logo.css';
 
 type LogoProps = {
-  variant?: 'full' | 'mark' | 'png';
-  theme?: 'light' | 'dark';
+  variant?: 'full' | 'compact';
   className?: string;
 };
 
-export function Logo({ variant = 'full', theme = 'dark', className = '' }: LogoProps) {
-  if (variant === 'png') {
-    return (
+/** Uses the source PNG so the mark matches your file exactly. */
+export function Logo({ variant = 'full', className = '' }: LogoProps) {
+  return (
+    <span className={`logo-frame logo-frame--${variant} ${className}`.trim()}>
       <img
         src="/logo/spydercorp.png"
         alt="spydercorp"
-        className={`logo logo--png ${className}`.trim()}
-        width={280}
-        height={175}
+        className="logo-frame__img"
+        width={variant === 'compact' ? 120 : 320}
+        height={variant === 'compact' ? 40 : 100}
       />
-    );
-  }
-
-  const src =
-    variant === 'mark'
-      ? theme === 'dark'
-        ? '/logo/spydercorp-mark-light.svg'
-        : '/logo/spydercorp-mark.svg'
-      : theme === 'dark'
-        ? '/logo/spydercorp-light.svg'
-        : '/logo/spydercorp.svg';
-
-  return (
-    <img
-      src={src}
-      alt="spydercorp"
-      className={`logo logo--${variant} ${className}`.trim()}
-      width={variant === 'mark' ? 40 : 200}
-      height={variant === 'mark' ? 40 : 48}
-    />
+    </span>
   );
 }

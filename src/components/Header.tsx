@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { Menu } from 'lucide-react';
+import { Menu, Moon, Sun } from 'lucide-react';
 import { Logo } from './Logo';
+import { useTheme } from '../theme/ThemeContext';
 import { MobileNav, type NavLink } from './MobileNav';
 import './Header.css';
 
@@ -15,6 +16,7 @@ const links: NavLink[] = [
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [navOpen, setNavOpen] = useState(false);
+  const { isDark, toggleTheme } = useTheme();
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
@@ -28,11 +30,7 @@ export function Header() {
       <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
         <div className="container header__inner">
           <a href="#" className="header__logo">
-            <Logo variant="mark" theme="dark" />
-            <span className="header__wordmark">
-              <strong>spyder</strong>
-              <strong className="text-accent">corp</strong>
-            </span>
+            <Logo variant="compact" />
           </a>
 
           <nav className="header__nav" aria-label="Primary">
@@ -43,9 +41,19 @@ export function Header() {
             ))}
           </nav>
 
-          <a href="#contact" className="btn btn-primary header__cta">
-            Start a project
-          </a>
+          <div className="header__actions">
+            <button
+              type="button"
+              className="header__icon-btn"
+              aria-label={isDark ? 'Switch to light mode' : 'Switch to dark mode'}
+              onClick={toggleTheme}
+            >
+              {isDark ? <Sun size={18} strokeWidth={1.75} /> : <Moon size={18} strokeWidth={1.75} />}
+            </button>
+            <a href="#contact" className="btn btn-primary header__cta">
+              Start a project
+            </a>
+          </div>
 
           <button
             type="button"

@@ -65,8 +65,8 @@
 .sc-field [data-part='input']:focus,
 .sc-field [data-part='textarea']:focus {
   outline: none;
-  border-color: var(--border-strong);
-  box-shadow: 0 0 0 1px var(--border-strong);
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-muted);
 }
 
 .sc-select-trigger {
@@ -141,8 +141,8 @@
 }
 
 .sc-tabs-trigger[data-selected] {
-  background: var(--text);
-  color: var(--bg);
+  background: var(--accent);
+  color: var(--on-accent);
 }
 
 .sc-accordion-item {

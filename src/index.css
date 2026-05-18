@@ -1,22 +1,46 @@
 @import './styles/ark.css';
 
-:root {
+:root,
+[data-theme='dark'] {
   color-scheme: dark;
   --bg: #0a0a0a;
-  --bg-elevated: #111111;
-  --bg-card: #0a0a0a;
+  --bg-elevated: #141414;
+  --bg-card: #111111;
   --border: rgba(255, 255, 255, 0.12);
   --border-strong: rgba(255, 255, 255, 0.28);
-  --text: #fafafa;
+  --text: #f5f5f5;
   --text-muted: #a3a3a3;
   --accent: #e30613;
-  --accent-dim: rgba(227, 6, 19, 0.12);
-  --radius: 6px;
-  --radius-lg: 8px;
+  --accent-hover: #ff1a28;
+  --accent-muted: rgba(227, 6, 19, 0.14);
+  --accent-subtle: rgba(227, 6, 19, 0.08);
+  --on-accent: #ffffff;
+  --grid-line: rgba(255, 255, 255, 0.05);
+  --shot-bg: #0f0f0f;
+  --radius: 8px;
+  --radius-lg: 10px;
   --font-display: 'Syne', system-ui, sans-serif;
   --font-body: 'Instrument Sans', system-ui, sans-serif;
   --max: 1080px;
   --header-h: 4rem;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+  --bg: #f4f4f5;
+  --bg-elevated: #ffffff;
+  --bg-card: #ffffff;
+  --border: rgba(10, 10, 10, 0.1);
+  --border-strong: rgba(10, 10, 10, 0.22);
+  --text: #0a0a0a;
+  --text-muted: #52525b;
+  --accent: #e30613;
+  --accent-hover: #c40510;
+  --accent-muted: rgba(227, 6, 19, 0.1);
+  --accent-subtle: rgba(227, 6, 19, 0.06);
+  --on-accent: #ffffff;
+  --grid-line: rgba(10, 10, 10, 0.06);
+  --shot-bg: #ebebeb;
 }
 
 *,
@@ -82,7 +106,7 @@ img {
 }
 
 .section {
-  padding: clamp(4rem, 10vw, 6.5rem) 0;
+  padding: clamp(3.5rem, 8vw, 6rem) 0;
   position: relative;
 }
 
@@ -108,8 +132,9 @@ img {
 .section-lead {
   font-size: 1.05rem;
   color: var(--text-muted);
-  max-width: 36rem;
+  max-width: 40rem;
   margin: 0 0 2rem;
+  line-height: 1.65;
 }
 
 .btn {
@@ -129,25 +154,25 @@ img {
 }
 
 .btn-primary {
-  background: var(--text);
-  color: var(--bg);
-  border-color: var(--text);
+  background: var(--accent);
+  color: var(--on-accent);
+  border-color: var(--accent);
 }
 
 .btn-primary:hover {
-  background: transparent;
-  color: var(--text);
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
 }
 
 .btn-ghost {
-  background: transparent;
+  background: var(--bg-card);
   border-color: var(--border);
   color: var(--text);
 }
 
 .btn-ghost:hover {
   border-color: var(--border-strong);
-  background: rgba(255, 255, 255, 0.04);
+  background: var(--bg-elevated);
 }
 
 .panel {
