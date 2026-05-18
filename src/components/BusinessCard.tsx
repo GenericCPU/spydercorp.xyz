@@ -41,15 +41,22 @@ export function BusinessCard() {
             <article className="biz-card__face biz-card__face--front" aria-hidden={flipped}>
               <div className="biz-card__accent biz-card__accent--bottom" />
               <div className="biz-card__front-body">
+                <div className="biz-card__front-header">
+                  <div
+                    className="biz-card__mark biz-card__mark--front"
+                    dangerouslySetInnerHTML={{ __html: markHtml }}
+                  />
+                  <div className="biz-card__front-lockup">
+                    <p className="biz-card__domain">{site.domain}</p>
+                    <p className="biz-card__services-line">Web · Brand · Systems</p>
+                  </div>
+                </div>
+                <p className="biz-card__tagline">{site.tagline}</p>
                 <div
-                  className="biz-card__mark biz-card__mark--front"
+                  className="biz-card__mark biz-card__mark--watermark"
+                  aria-hidden
                   dangerouslySetInnerHTML={{ __html: markHtml }}
                 />
-                <div className="biz-card__front-copy">
-                  <p className="biz-card__domain">{site.domain}</p>
-                  <p className="biz-card__services-line">Web · Brand · Systems</p>
-                  <p className="biz-card__tagline">{site.tagline}</p>
-                </div>
               </div>
             </article>
 
@@ -74,10 +81,6 @@ export function BusinessCard() {
                     {site.domain}
                   </a>
                   <p className="biz-card__location">{site.location}</p>
-                  <div
-                    className="biz-card__mark biz-card__mark--back"
-                    dangerouslySetInnerHTML={{ __html: markHtml }}
-                  />
                 </div>
 
                 <div className="biz-card__back-col biz-card__back-col--services">
@@ -93,6 +96,11 @@ export function BusinessCard() {
                     Pro bono opportunities for local small businesses
                   </p>
                 </div>
+                <div
+                  className="biz-card__mark biz-card__mark--watermark"
+                  aria-hidden
+                  dangerouslySetInnerHTML={{ __html: markHtml }}
+                />
               </div>
             </article>
           </div>

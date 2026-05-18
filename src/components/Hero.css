@@ -2,19 +2,20 @@
   position: relative;
   z-index: 1;
   padding-top: calc(var(--site-header-offset, var(--header-h)) + clamp(2rem, 6vw, 3.5rem));
-  padding-bottom: clamp(2.5rem, 6vw, 4rem);
+  padding-bottom: clamp(1.75rem, 4vw, 2.75rem);
 }
 
 .hero__grid {
   display: grid;
-  gap: 2rem;
-  align-items: center;
+  gap: 1.5rem;
+  align-items: start;
 }
 
 @media (min-width: 900px) {
   .hero__grid {
     grid-template-columns: 1.1fr 0.9fr;
-    gap: 2.5rem 3rem;
+    gap: 2rem 2.5rem;
+    align-items: start;
   }
 }
 
@@ -87,14 +88,16 @@
 .hero__brand {
   display: flex;
   justify-content: center;
-  align-items: center;
-  align-self: center;
+  align-items: flex-start;
+  align-self: start;
   padding: 0;
+  margin: 0;
   overflow: visible;
 }
 
 @media (min-width: 900px) {
   .hero__brand {
     justify-content: flex-end;
+    padding-top: 0.15rem;
   }
 }
