@@ -49,6 +49,14 @@ export const portfolio = [
         "featured": true,
         "width": 2322,
         "height": 1750
+      },
+      {
+        "src": "/work/handcash/image.png",
+        "alt": "HandCash — Image",
+        "caption": "Image",
+        "featured": false,
+        "width": 816,
+        "height": 1768
       }
     ]
   },
@@ -65,10 +73,18 @@ export const portfolio = [
     ],
     "shots": [
       {
-        "src": "/work/BrainrotGamez/Screenshot%202026-05-18%20at%206.18.50%E2%80%AFPM.png",
-        "alt": "BrainrotGamez — Screen 1",
-        "caption": "Screen 1",
+        "src": "/work/BrainrotGamez/IMG_4137.PNG",
+        "alt": "BrainrotGamez — IMG_4137",
+        "caption": "IMG_4137",
         "featured": true,
+        "width": 1170,
+        "height": 2532
+      },
+      {
+        "src": "/work/BrainrotGamez/Screenshot%202026-05-18%20at%206.18.50%E2%80%AFPM.png",
+        "alt": "BrainrotGamez — Screen 2",
+        "caption": "Screen 2",
+        "featured": false,
         "width": 2100,
         "height": 1632
       }

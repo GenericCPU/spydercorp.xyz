@@ -81,7 +81,9 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
             className={`work-shot${shot.width >= shot.height ? ' work-shot--landscape' : ' work-shot--portrait'}`}
             onClick={() => lightbox.setIndex(i)}
           >
-            <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
+            <span className="work-shot__media">
+              <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
+            </span>
             <span className="work-shot__caption">{shot.caption}</span>
           </button>
         ))}
