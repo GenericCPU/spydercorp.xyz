@@ -1,7 +1,7 @@
 import react from '@vitejs/plugin-react';
 import type { IncomingMessage } from 'node:http';
 import { defineConfig, type Plugin } from 'vite';
-import { forwardContactToFormSubmit } from './lib/contactServer';
+import { forwardContact } from './api/lib/contactServer';
 
 function readJsonBody(req: IncomingMessage): Promise<unknown> {
   return new Promise((resolve, reject) => {
@@ -42,7 +42,7 @@ function contactApiDev(): Plugin {
 
         try {
           const body = await readJsonBody(req);
-          const result = await forwardContactToFormSubmit(body as Parameters<typeof forwardContactToFormSubmit>[0]);
+          const result = await forwardContact(body as Parameters<typeof forwardContact>[0]);
           res.statusCode = result.ok ? 200 : 502;
           res.setHeader('Content-Type', 'application/json');
           res.end(JSON.stringify(result));

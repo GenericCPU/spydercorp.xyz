@@ -1,4 +1,4 @@
-import type { ContactPayload } from '../../lib/contactServer';
+import type { ContactPayload } from '../types/contact';
 
 export type { ContactPayload };
 export type SubmitResult = { ok: true } | { ok: false; error: string };

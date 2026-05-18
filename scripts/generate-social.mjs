@@ -28,3 +28,4 @@ renderToFile(
   path.join(publicDir, 'apple-touch-icon.png'),
   180,
 );
+renderToFile(path.join(publicDir, 'favicon.svg'), path.join(publicDir, 'favicon-32.png'), 32);
