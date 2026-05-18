@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="600" viewBox="0 0 1050 600">
+  <rect width="1050" height="600" fill="#ffffff"/>
+  <rect x="0" y="596" width="1050" height="4" fill="#e30613"/>
+
+  <g transform="translate(64 78) scale(2.35)">
+    <!-- MARK -->
+  </g>
+
+  <g font-family="system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+    <text x="318" y="268" font-size="50" font-weight="700" fill="#0a0a0a" letter-spacing="-0.03em">spydercorp.xyz</text>
+    <text x="318" y="312" font-size="15" font-weight="600" fill="#e30613" letter-spacing="0.14em">WEB &#183; BRAND &#183; SYSTEMS</text>
+    <text x="318" y="358" font-size="17" fill="#525252">Web, brand, and systems &#8212; built to fit</text>
+    <text x="318" y="386" font-size="17" fill="#525252">how you actually operate.</text>
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="720" viewBox="0 0 2200 720">
+  <rect width="2200" height="720" fill="#f5f5f5"/>
+  <text x="575" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#737373" letter-spacing="0.08em">FRONT</text>
+  <text x="1625" y="56" text-anchor="middle" font-family="system-ui, sans-serif" font-size="22" fill="#737373" letter-spacing="0.08em">BACK</text>
+
+  <g transform="translate(50 80)">
+    <rect width="1050" height="600" fill="#ffffff" stroke="#e5e5e5" stroke-width="1"/>
+    <rect x="0" y="596" width="1050" height="4" fill="#e30613"/>
+    <g transform="translate(64 78) scale(2.35)"><!-- MARK --></g>
+    <g font-family="system-ui, sans-serif">
+      <text x="318" y="268" font-size="50" font-weight="700" fill="#0a0a0a" letter-spacing="-0.03em">spydercorp.xyz</text>
+      <text x="318" y="312" font-size="15" font-weight="600" fill="#e30613" letter-spacing="0.14em">WEB &#183; BRAND &#183; SYSTEMS</text>
+      <text x="318" y="358" font-size="17" fill="#525252">Web, brand, and systems &#8212; built to fit</text>
+      <text x="318" y="386" font-size="17" fill="#525252">how you actually operate.</text>
+    </g>
+  </g>
+
+  <g transform="translate(1100 80)">
+    <rect width="1050" height="600" fill="#ffffff" stroke="#e5e5e5" stroke-width="1"/>
+    <rect x="0" y="0" width="5" height="600" fill="#e30613"/>
+    <g font-family="system-ui, sans-serif">
+      <text x="72" y="168" font-size="28" font-weight="700" fill="#0a0a0a">Brandon Cryderman</text>
+      <text x="72" y="202" font-size="13" font-weight="600" fill="#e30613" letter-spacing="0.12em">WEB &#183; BRAND &#183; SYSTEMS</text>
+      <text x="72" y="268" font-size="20" fill="#0a0a0a">brandongcryderman@gmail.com</text>
+      <text x="72" y="304" font-size="20" font-weight="600" fill="#0a0a0a">spydercorp.xyz</text>
+      <text x="72" y="340" font-size="18" fill="#525252">Halifax, NS</text>
+      <text x="560" y="168" font-size="13" font-weight="600" fill="#737373" letter-spacing="0.1em">SERVICES</text>
+      <rect x="560" y="198" width="8" height="8" fill="#e30613"/><text x="580" y="208" font-size="19" fill="#0a0a0a">Brand &amp; marketing</text>
+      <rect x="560" y="238" width="8" height="8" fill="#e30613"/><text x="580" y="248" font-size="19" fill="#0a0a0a">Web design &amp; shops</text>
+      <rect x="560" y="278" width="8" height="8" fill="#e30613"/><text x="580" y="288" font-size="19" fill="#0a0a0a">Custom systems &amp; admin</text>
+      <rect x="560" y="318" width="8" height="8" fill="#e30613"/><text x="580" y="328" font-size="19" fill="#0a0a0a">Flexible engagement</text>
+      <line x1="560" y1="380" x2="978" y2="380" stroke="#e5e5e5"/>
+      <text x="560" y="418" font-size="15" fill="#737373">Project &#183; retainer &#183; pro bono for qualifying local shops</text>
+    </g>
+    <g transform="translate(900 468) scale(0.72)"><!-- MARK --></g>
+  </g>
+</svg>

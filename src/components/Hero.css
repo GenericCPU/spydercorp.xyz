@@ -87,11 +87,14 @@
 .hero__brand {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  align-self: center;
 }
 
 @media (min-width: 900px) {
   .hero__brand {
     justify-content: flex-end;
+    align-self: center;
+    padding-top: 0.5rem;
   }
 }

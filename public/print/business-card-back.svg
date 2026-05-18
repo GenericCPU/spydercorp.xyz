@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1050" height="600" viewBox="0 0 1050 600">
+  <rect width="1050" height="600" fill="#ffffff"/>
+  <rect x="0" y="0" width="5" height="600" fill="#e30613"/>
+
+  <g font-family="system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif">
+    <!-- Contact -->
+    <text x="72" y="168" font-size="28" font-weight="700" fill="#0a0a0a" letter-spacing="-0.02em">Brandon Cryderman</text>
+    <text x="72" y="202" font-size="13" font-weight="600" fill="#e30613" letter-spacing="0.12em">WEB &#183; BRAND &#183; SYSTEMS</text>
+
+    <text x="72" y="268" font-size="20" fill="#0a0a0a">brandongcryderman@gmail.com</text>
+    <text x="72" y="304" font-size="20" font-weight="600" fill="#0a0a0a">spydercorp.xyz</text>
+    <text x="72" y="340" font-size="18" fill="#525252">Halifax, NS</text>
+
+    <!-- Services -->
+    <text x="560" y="168" font-size="13" font-weight="600" fill="#737373" letter-spacing="0.1em">SERVICES</text>
+
+    <g font-size="19" fill="#0a0a0a">
+      <rect x="560" y="198" width="8" height="8" fill="#e30613"/>
+      <text x="580" y="208">Brand &amp; marketing</text>
+
+      <rect x="560" y="238" width="8" height="8" fill="#e30613"/>
+      <text x="580" y="248">Web design &amp; shops</text>
+
+      <rect x="560" y="278" width="8" height="8" fill="#e30613"/>
+      <text x="580" y="288">Custom systems &amp; admin</text>
+
+      <rect x="560" y="318" width="8" height="8" fill="#e30613"/>
+      <text x="580" y="328">Flexible engagement</text>
+    </g>
+
+    <line x1="560" y1="380" x2="978" y2="380" stroke="#e5e5e5" stroke-width="1"/>
+    <text x="560" y="418" font-size="15" fill="#737373">Project &#183; retainer &#183; pro bono for qualifying local shops</text>
+  </g>
+
+  <g transform="translate(900 468) scale(0.72)">
+    <!-- MARK -->
+  </g>
+</svg>

@@ -1,5 +1,5 @@
 import { ArrowRight } from 'lucide-react';
-import { Logo } from './Logo';
+import { BusinessCard } from './BusinessCard';
 import { site } from '../site';
 import './Hero.css';
 
@@ -50,7 +50,7 @@ export function Hero() {
         </div>
 
         <div className="hero__brand">
-          <Logo variant="full" />
+          <BusinessCard />
         </div>
       </div>
     </section>

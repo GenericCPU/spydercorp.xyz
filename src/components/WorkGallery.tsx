@@ -36,6 +36,10 @@ function useLightbox(shots: readonly PortfolioShot[]) {
   return { index, setIndex, open, current, close, go, shots };
 }
 
+function shotAspectStyle(shot: PortfolioShot): React.CSSProperties {
+  return { '--shot-aspect': shot.width / shot.height } as React.CSSProperties;
+}
+
 function ProjectGallery({ project }: { project: PortfolioProject }) {
   const shots = [...project.shots];
   const lightbox = useLightbox(shots);
@@ -43,6 +47,7 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
   if (!shots.length) return null;
 
   const layout = getWorkGalleryLayout(shots);
+  const pairedLayout = layout === 'row' || layout === 'grid';
 
   return (
     <article className="work-project panel">
@@ -79,6 +84,7 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
             key={shot.src}
             type="button"
             className={`work-shot${shot.width >= shot.height ? ' work-shot--landscape' : ' work-shot--portrait'}`}
+            style={pairedLayout ? shotAspectStyle(shot) : undefined}
             onClick={() => lightbox.setIndex(i)}
           >
             <span className="work-shot__media">

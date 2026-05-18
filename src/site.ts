@@ -1,6 +1,10 @@
 export const site = {
+  url: 'https://spydercorp.xyz',
   domain: 'spydercorp.xyz',
   brand: 'spydercorp',
+  title: 'spydercorp — Web · Brand · Systems',
+  description:
+    'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   tagline: 'Web, brand, and systems — built to fit how you actually operate.',
   email: 'brandongcryderman@gmail.com',
   location: 'Halifax, NS',

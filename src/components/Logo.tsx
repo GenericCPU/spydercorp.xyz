@@ -28,7 +28,7 @@ export function Logo({ variant = 'full', className = '' }: LogoProps) {
   return (
     <span className={`logo-frame logo-frame--full ${className}`.trim()}>
       <img
-        src="/logo/spydercorp.png"
+        src="/logo/spydercorp.svg"
         alt="spydercorp"
         className="logo-frame__img"
         width={320}
