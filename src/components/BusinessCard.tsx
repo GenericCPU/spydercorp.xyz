@@ -1,4 +1,4 @@
-import { useCallback, useId, useState } from 'react';
+import { Fragment, useCallback, useId, useState } from 'react';
 import markSvg from '../assets/spydercorp-mark.svg?raw';
 import { site } from '../site';
 import './BusinessCard.css';
@@ -11,12 +11,31 @@ const markHtml = markSvg
     '<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" ',
   );
 
+const PILLARS = ['Web', 'Brand', 'Systems'] as const;
+
 const SERVICES = [
   'Brand & marketing',
   'Web design & shops',
   'Custom systems & admin',
   'Flexible engagement',
 ] as const;
+
+function PillarsLine({ className }: { className?: string }) {
+  return (
+    <p className={className ?? 'biz-card__services-line'}>
+      {PILLARS.map((label, i) => (
+        <Fragment key={label}>
+          {i > 0 ? (
+            <span className="biz-card__pillar-sep" aria-hidden>
+              ·
+            </span>
+          ) : null}
+          <span className="biz-card__pillar">{label}</span>
+        </Fragment>
+      ))}
+    </p>
+  );
+}
 
 export function BusinessCard() {
   const [flipped, setFlipped] = useState(false);
@@ -48,7 +67,7 @@ export function BusinessCard() {
                   />
                   <div className="biz-card__front-lockup">
                     <p className="biz-card__domain">{site.domain}</p>
-                    <p className="biz-card__services-line">Web · Brand · Systems</p>
+                    <PillarsLine />
                   </div>
                 </div>
                 <p className="biz-card__tagline">{site.tagline}</p>
@@ -65,7 +84,7 @@ export function BusinessCard() {
               <div className="biz-card__back-body">
                 <div className="biz-card__back-col biz-card__back-col--contact">
                   <p className="biz-card__name">Brandon Cryderman</p>
-                  <p className="biz-card__services-line">Web · Brand · Systems</p>
+                  <PillarsLine />
                   <a
                     className="biz-card__link biz-card__link--email"
                     href={`mailto:${site.email}`}

@@ -62,10 +62,10 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
             href={project.url}
             target="_blank"
             rel="noopener noreferrer"
-            className="work-project__link"
+            className="btn btn-ghost work-project__link"
           >
             Live site
-            <ArrowUpRight size={18} aria-hidden />
+            <ArrowUpRight size={16} strokeWidth={2} aria-hidden />
           </a>
         ) : null}
       </header>

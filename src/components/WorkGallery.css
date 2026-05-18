@@ -43,19 +43,11 @@
 }
 
 .work-project__link {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.3rem;
-  font-size: 0.82rem;
-  font-weight: 600;
-  border: 1px solid var(--border);
-  padding: 0.45rem 0.75rem;
-  border-radius: var(--radius);
-}
-
-.work-project__link:hover {
-  border-color: var(--accent);
-  color: var(--accent);
+  flex-shrink: 0;
+  align-self: flex-start;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  letter-spacing: 0.02em;
 }
 
 .work-project__tags {

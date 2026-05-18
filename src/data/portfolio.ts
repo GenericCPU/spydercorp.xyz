@@ -61,36 +61,6 @@ export const portfolio = [
     ]
   },
   {
-    "id": "BrainrotGamez",
-    "title": "BrainrotGamez",
-    "category": "Games · Web",
-    "url": "",
-    "description": "Playful game storefront and discovery experience with bold visuals and fast browse-to-play paths.",
-    "tags": [
-      "Games",
-      "Web design",
-      "Engineering"
-    ],
-    "shots": [
-      {
-        "src": "/work/BrainrotGamez/IMG_4137.PNG",
-        "alt": "BrainrotGamez — IMG_4137",
-        "caption": "IMG_4137",
-        "featured": true,
-        "width": 1170,
-        "height": 2532
-      },
-      {
-        "src": "/work/BrainrotGamez/Screenshot%202026-05-18%20at%206.18.50%E2%80%AFPM.png",
-        "alt": "BrainrotGamez — Screen 2",
-        "caption": "Screen 2",
-        "featured": false,
-        "width": 2100,
-        "height": 1632
-      }
-    ]
-  },
-  {
     "id": "LilPoker",
     "title": "LilPoker",
     "category": "Games · Web",
@@ -139,6 +109,36 @@ export const portfolio = [
         "featured": false,
         "width": 1032,
         "height": 1768
+      }
+    ]
+  },
+  {
+    "id": "BrainrotGamez",
+    "title": "BrainrotGamez",
+    "category": "Games · Web",
+    "url": "",
+    "description": "Playful game storefront and discovery experience with bold visuals and fast browse-to-play paths.",
+    "tags": [
+      "Games",
+      "Web design",
+      "Engineering"
+    ],
+    "shots": [
+      {
+        "src": "/work/BrainrotGamez/IMG_4137.PNG",
+        "alt": "BrainrotGamez — IMG_4137",
+        "caption": "IMG_4137",
+        "featured": true,
+        "width": 1170,
+        "height": 2532
+      },
+      {
+        "src": "/work/BrainrotGamez/Screenshot%202026-05-18%20at%206.18.50%E2%80%AFPM.png",
+        "alt": "BrainrotGamez — Screen 2",
+        "caption": "Screen 2",
+        "featured": false,
+        "width": 2100,
+        "height": 1632
       }
     ]
   }

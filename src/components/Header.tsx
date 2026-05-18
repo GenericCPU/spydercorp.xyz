@@ -27,6 +27,8 @@ export function Header() {
           <span className="header__brand-text">{site.domain}</span>
         </a>
 
+        <div className="header__divider" aria-hidden="true" />
+
         <nav className="header__nav" aria-label="Primary">
           {navLinks.map((l) => {
             const isActive = activeHref === l.href;
