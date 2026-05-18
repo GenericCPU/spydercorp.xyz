@@ -1,8 +1,9 @@
 import { createListCollection } from '@ark-ui/react/collection';
 import { Field } from '@ark-ui/react/field';
 import { Select } from '@ark-ui/react/select';
-import { Check, Mail, MapPin } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { Check, Mail, MapPin, Phone } from 'lucide-react';
+import { useState } from 'react';
+import { submitContactForm } from '../lib/submitContact';
 import { projectTypes, site } from '../site';
 import './Contact.css';
 
@@ -12,26 +13,13 @@ const projectCollection = createListCollection({
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
-const formAction = `https://formsubmit.co/${encodeURIComponent(site.email)}`;
-const formNext = `${site.url}/?sent=1`;
-
 export function Contact() {
   const [projectType, setProjectType] = useState<string[]>([projectTypes[0].value]);
   const [status, setStatus] = useState<FormStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
-  const typeLabel =
-    projectTypes.find((p) => p.value === projectType[0])?.label ?? 'General';
-
-  useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    if (params.get('sent') === '1') {
-      setStatus('success');
-      window.history.replaceState({}, '', `${window.location.pathname}#contact`);
-    }
-  }, []);
-
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
     const form = e.currentTarget;
     const data = new FormData(form);
 
@@ -40,20 +28,18 @@ export function Contact() {
     const message = String(data.get('message') ?? '').trim();
     const honeypot = String(data.get('_gotcha') ?? '');
 
-    if (honeypot) {
-      e.preventDefault();
-      return;
-    }
+    if (honeypot) return;
+
+    const typeLabel =
+      projectTypes.find((p) => p.value === projectType[0])?.label ?? 'General';
 
     if (!name || !email || !message) {
-      e.preventDefault();
       setStatus('error');
       setErrorMessage('Name, email, and message are required.');
       return;
     }
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      e.preventDefault();
       setStatus('error');
       setErrorMessage('Please enter a valid email address.');
       return;
@@ -61,6 +47,23 @@ export function Contact() {
 
     setStatus('sending');
     setErrorMessage('');
+
+    const result = await submitContactForm({
+      name,
+      email,
+      message,
+      projectType: typeLabel,
+    });
+
+    if (result.ok) {
+      setStatus('success');
+      form.reset();
+      setProjectType([projectTypes[0].value]);
+      return;
+    }
+
+    setStatus('error');
+    setErrorMessage(result.error);
   };
 
   return (
@@ -84,6 +87,10 @@ export function Contact() {
                 <a href={`mailto:${site.email}`}>{site.email}</a>
               </li>
               <li>
+                <Phone size={18} aria-hidden />
+                <a href={`tel:${site.phoneTel}`}>{site.phone}</a>
+              </li>
+              <li>
                 <MapPin size={18} aria-hidden />
                 <span>{site.location}</span>
               </li>
@@ -104,19 +111,7 @@ export function Contact() {
               </p>
             )}
 
-            <form
-              className="contact__form"
-              action={formAction}
-              method="POST"
-              onSubmit={handleSubmit}
-              noValidate
-            >
-              <input type="hidden" name="_subject" value="Project inquiry — SpyderCorp" />
-              <input type="hidden" name="_template" value="table" />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_next" value={formNext} />
-              <input type="hidden" name="project_type" value={typeLabel} readOnly />
-
+            <form className="contact__form" onSubmit={handleSubmit} noValidate>
               <input
                 type="text"
                 name="_gotcha"
