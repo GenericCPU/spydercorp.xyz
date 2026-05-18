@@ -53,8 +53,8 @@ export function BusinessCard() {
 
             <article className="biz-card__face biz-card__face--back" aria-hidden={!flipped}>
               <div className="biz-card__accent biz-card__accent--left" />
-              <div className="biz-card__back-grid">
-                <div className="biz-card__contact">
+              <div className="biz-card__back-body">
+                <div className="biz-card__back-col biz-card__back-col--contact">
                   <p className="biz-card__name">Brandon Cryderman</p>
                   <p className="biz-card__services-line">Web · Brand · Systems</p>
                   <a
@@ -72,9 +72,13 @@ export function BusinessCard() {
                     {site.domain}
                   </a>
                   <p className="biz-card__location">{site.location}</p>
+                  <div
+                    className="biz-card__mark biz-card__mark--back"
+                    dangerouslySetInnerHTML={{ __html: markHtml }}
+                  />
                 </div>
 
-                <div className="biz-card__services">
+                <div className="biz-card__back-col biz-card__back-col--services">
                   <p className="biz-card__services-heading">Services</p>
                   <ul className="biz-card__services-list">
                     {SERVICES.map((item) => (
@@ -82,14 +86,10 @@ export function BusinessCard() {
                     ))}
                   </ul>
                   <p className="biz-card__footnote">
-                    Project · retainer · pro bono for qualifying local shops
+                    Project · retainer · pro bono local
                   </p>
                 </div>
               </div>
-              <div
-                className="biz-card__mark biz-card__mark--back"
-                dangerouslySetInnerHTML={{ __html: markHtml }}
-              />
             </article>
           </div>
         </div>
