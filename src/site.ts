@@ -2,7 +2,7 @@ export const site = {
   domain: 'spidercorp.xyz',
   brand: 'spydercorp',
   tagline: 'Web, brand, and systems — built to fit how you actually operate.',
-  email: 'hello@spidercorp.xyz',
+  email: 'brandongcryderman@gmail.com',
   location: 'Halifax, NS',
   demoUrl: 'https://bringmebuds.vercel.app',
 } as const;
