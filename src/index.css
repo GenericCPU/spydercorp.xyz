@@ -23,6 +23,7 @@
   --font-body: 'Instrument Sans', system-ui, sans-serif;
   --max: 1080px;
   --header-h: 3.5rem;
+  --header-row-h: 3.25rem;
   --topbar-bg: color-mix(in srgb, var(--bg) 94%, transparent);
   --topbar-bg-scrolled: color-mix(in srgb, var(--bg) 97%, transparent);
   --topbar-blur: 12px;
@@ -30,6 +31,13 @@
   --section-y: clamp(4rem, 8vw, 6rem);
   --panel-pad: clamp(1.35rem, 3.5vw, 2rem);
   --stack: 1.25rem;
+  --site-header-offset: var(--header-h);
+}
+
+@media (max-width: 899px) {
+  :root {
+    --site-header-offset: 6.35rem;
+  }
 }
 
 [data-theme='light'] {
@@ -116,7 +124,7 @@ img {
 .section {
   padding-block: var(--section-y);
   position: relative;
-  scroll-margin-top: calc(var(--header-h) + 1rem);
+  scroll-margin-top: calc(var(--site-header-offset, var(--header-h)) + 1rem);
 }
 
 .section-header {
