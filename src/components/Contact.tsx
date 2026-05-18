@@ -3,7 +3,6 @@ import { Field } from '@ark-ui/react/field';
 import { Select } from '@ark-ui/react/select';
 import { Check, Mail, MapPin } from 'lucide-react';
 import { useEffect, useState } from 'react';
-import { submitContactForm } from '../lib/submitContact';
 import { projectTypes, site } from '../site';
 import './Contact.css';
 
@@ -13,21 +12,26 @@ const projectCollection = createListCollection({
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
+const formAction = `https://formsubmit.co/${encodeURIComponent(site.email)}`;
+const formNext = `${site.url}/?sent=1`;
+
 export function Contact() {
   const [projectType, setProjectType] = useState<string[]>([projectTypes[0].value]);
   const [status, setStatus] = useState<FormStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
 
+  const typeLabel =
+    projectTypes.find((p) => p.value === projectType[0])?.label ?? 'General';
+
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     if (params.get('sent') === '1') {
       setStatus('success');
-      window.history.replaceState({}, '', window.location.pathname + '#contact');
+      window.history.replaceState({}, '', `${window.location.pathname}#contact`);
     }
   }, []);
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     const form = e.currentTarget;
     const data = new FormData(form);
 
@@ -36,30 +40,27 @@ export function Contact() {
     const message = String(data.get('message') ?? '').trim();
     const honeypot = String(data.get('_gotcha') ?? '');
 
-    if (honeypot) return;
-
-    const typeLabel =
-      projectTypes.find((p) => p.value === projectType[0])?.label ?? 'General';
-
-    setStatus('sending');
-    setErrorMessage('');
-
-    const result = await submitContactForm({
-      name,
-      email,
-      message,
-      projectType: typeLabel,
-    });
-
-    if (result.ok) {
-      setStatus('success');
-      form.reset();
-      setProjectType([projectTypes[0].value]);
+    if (honeypot) {
+      e.preventDefault();
       return;
     }
 
-    setStatus('error');
-    setErrorMessage(result.error);
+    if (!name || !email || !message) {
+      e.preventDefault();
+      setStatus('error');
+      setErrorMessage('Name, email, and message are required.');
+      return;
+    }
+
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      e.preventDefault();
+      setStatus('error');
+      setErrorMessage('Please enter a valid email address.');
+      return;
+    }
+
+    setStatus('sending');
+    setErrorMessage('');
   };
 
   return (
@@ -103,7 +104,19 @@ export function Contact() {
               </p>
             )}
 
-            <form className="contact__form" onSubmit={handleSubmit} noValidate>
+            <form
+              className="contact__form"
+              action={formAction}
+              method="POST"
+              onSubmit={handleSubmit}
+              noValidate
+            >
+              <input type="hidden" name="_subject" value="Project inquiry — SpyderCorp" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_next" value={formNext} />
+              <input type="hidden" name="project_type" value={typeLabel} readOnly />
+
               <input
                 type="text"
                 name="_gotcha"
