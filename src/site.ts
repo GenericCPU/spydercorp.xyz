@@ -16,7 +16,7 @@ export const site = {
   announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
-    'One cohesive stack from brand and design through full-stack engineering — one partner from what your customers see to the systems that run your business.',
+    'One cohesive stack from brand and design through full-stack engineering — one partner for your site, your tools, and the systems that run your business.',
   workSectionLabel: 'Work',
   workSectionTitle: 'Recent projects',
   contactSectionLead: 'I look forward to helping your business grow.',
