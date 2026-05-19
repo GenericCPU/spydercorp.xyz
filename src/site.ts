@@ -113,6 +113,11 @@ export const process = [
     title: 'Launch & tune',
     body: 'Go live, measure, refine. Your site and systems should work as hard as your team.',
   },
+  {
+    step: '04',
+    title: 'Host it yourself',
+    body: 'When you are ready, we help you run it on your own infrastructure — no ongoing fees to us. You stay in control of what we delivered.',
+  },
 ] as const;
 
 export const projectTypes = [

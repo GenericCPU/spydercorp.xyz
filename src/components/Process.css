@@ -10,7 +10,13 @@
 
 @media (min-width: 768px) {
   .process__steps {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1100px) {
+  .process__steps {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
