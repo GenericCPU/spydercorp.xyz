@@ -105,17 +105,18 @@
 }
 
 .hero__lead {
-  margin: 0 0 0.75rem;
+  margin: 0 0 0.85rem;
   font-size: 1.125rem;
-  font-weight: 500;
+  font-weight: 600;
   color: var(--text);
-  max-width: 36ch;
+  max-width: 38ch;
+  line-height: 1.45;
 }
 
 .hero__sub {
   margin: 0 0 1.5rem;
   color: var(--text-muted);
-  max-width: 42ch;
+  max-width: 44ch;
   line-height: 1.65;
 }
 

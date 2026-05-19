@@ -5,9 +5,9 @@ export const site = {
   title: 'SpyderCorp — Web · Brand · Systems',
   description:
     'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
-  tagline: 'Web, brand, and systems — built to fit how you actually operate.',
+  tagline: 'Premium web & custom architecture for your business.',
   heroSub:
-    'Full software customization and custom sustainable architecture — lightweight, premium, and built around how you work.',
+    "You don't need a full-time developer — we build turnkey systems that last.",
   email: 'brandongcryderman@gmail.com',
   phone: '+1-902-441-1924',
   phoneTel: '+19024411924',
