@@ -94,7 +94,6 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
             <span className="work-shot__media">
               <img src={shot.src} alt={shot.alt} loading="lazy" decoding="async" />
             </span>
-            <span className="work-shot__caption">{shot.caption}</span>
           </button>
         ))}
       </div>
@@ -112,7 +111,7 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
           <Dialog.Positioner className="work-lightbox-positioner">
             <Dialog.Content className="work-lightbox">
               <Dialog.Title className="sr-only">
-                {lightbox.current?.caption ?? project.title}
+                {lightbox.current?.alt ?? project.title}
               </Dialog.Title>
               <header className="work-lightbox__header">
                 {shots.length > 1 ? (
@@ -130,9 +129,6 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
 
                 <div className="work-lightbox__text">
                   <p className="work-lightbox__project">{project.title}</p>
-                  {lightbox.current?.caption ? (
-                    <p className="work-lightbox__caption">{lightbox.current.caption}</p>
-                  ) : null}
                 </div>
 
                 <div className="work-lightbox__actions">

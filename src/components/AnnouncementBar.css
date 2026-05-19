@@ -25,7 +25,7 @@
 }
 
 .announcement__callout {
-  color: var(--accent);
+  color: #fff;
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -65,4 +65,8 @@
   .announcement__sep--cta {
     display: inline;
   }
+}
+
+[data-theme='light'] .announcement {
+  background: color-mix(in srgb, var(--accent) 62%, #0a0a0a);
 }
