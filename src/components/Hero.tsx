@@ -34,18 +34,12 @@ export function Hero() {
           </div>
 
           <dl className="hero__stats">
-            <div>
-              <dt>Front of house</dt>
-              <dd>Sites · shops · brand</dd>
-            </div>
-            <div>
-              <dt>Back of house</dt>
-              <dd>Admin · inventory · orders</dd>
-            </div>
-            <div>
-              <dt>Engagement</dt>
-              <dd>Flexible pay · pro bono for local small businesses</dd>
-            </div>
+            {site.heroStats.map((stat) => (
+              <div key={stat.label}>
+                <dt>{stat.label}</dt>
+                <dd>{stat.detail}</dd>
+              </div>
+            ))}
           </dl>
         </div>
 

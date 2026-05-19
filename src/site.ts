@@ -20,36 +20,46 @@ export const site = {
   workSectionTitle: 'Recent projects',
   workSectionLead:
     'Product UI and full-stack builds for shops, wallets, games, and tools. Click any screenshot to view full size.',
+  heroStats: [
+    {
+      label: 'Front of house',
+      detail: 'Brand, product UI, and storefronts your customers touch',
+    },
+    {
+      label: 'Back of house',
+      detail: 'Databases, integrations, and admin — one cohesive, lightweight architecture',
+    },
+    {
+      label: 'Engagement',
+      detail: 'Flexible pay · pro bono for local small businesses',
+    },
+  ],
 } as const;
 
 export const services = [
   {
     id: 'brand',
     title: 'Brand & marketing',
-    description:
-      'Positioning, messaging, and visibility so the right people find you — walk-in shops, product launches, and local word of mouth.',
-    highlights: ['Local SEO', 'Brand story', 'Campaign-ready assets'],
+    description: 'Positioning and visibility so the right people find you.',
+    highlights: ['Brand & messaging', 'Local SEO'],
   },
   {
     id: 'design',
     title: 'Web design',
-    description:
-      'Clean, conversion-focused interfaces. Mobile-first layouts that feel premium without template bloat.',
-    highlights: ['UI/UX systems', 'Landing & shop flows', 'Accessible components'],
+    description: 'Premium interfaces that work on every screen.',
+    highlights: ['UI systems', 'Shops & landing pages'],
   },
   {
     id: 'engineering',
     title: 'Full-stack engineering',
-    description:
-      'Fast frontends and APIs you own. Modern React stacks, integrations, checkout, and performance — shipped end to end.',
-    highlights: ['React & TypeScript', 'APIs & integrations', 'Performance tuned'],
+    description: 'React, TypeScript, and APIs shipped end to end.',
+    highlights: ['Frontends & APIs', 'Integrations'],
   },
   {
     id: 'systems',
     title: 'Custom backend & admin',
-    description:
-      'Inventory, ordering, support desks, internal tools — not limited to a template. If your business needs it, we can build it.',
-    highlights: ['Admin dashboards', 'Inventory & orders', 'Support tooling', "Sky's the limit"],
+    description: 'Admin, inventory, and internal tools beyond templates.',
+    highlights: ['Dashboards', 'Inventory & orders'],
   },
 ] as const;
 
@@ -57,20 +67,17 @@ export const studioCommitments = [
   {
     id: 'personal',
     title: 'Personalized service',
-    description:
-      'You work directly with the person designing and building your project — clear communication, no account-manager relay.',
+    description: 'You work directly with who designs and builds it.',
   },
   {
     id: 'payment',
     title: 'Flexible payment',
-    description:
-      'Project rate, milestone billing, retainer, trade, or donation when it fits — we structure around your cash flow, not a rigid package.',
+    description: 'Project, retainer, trade, or milestones that fit your cash flow.',
   },
   {
     id: 'probono',
     title: 'Pro bono for local small businesses',
-    description:
-      'Pro bono opportunities for qualifying local small businesses with a real community need — ask honestly; we’ll tell you if it’s a fit.',
+    description: 'Ask honestly — we will tell you if it is a fit.',
   },
 ] as const;
 
