@@ -2,10 +2,6 @@
   <rect width="1050" height="600" fill="#ffffff"/>
   <rect x="0" y="596" width="1050" height="4" fill="#e30613"/>
 
-  <g opacity="0.09" transform="translate(888 468) scale(2.65)">
-    <!-- MARK_WATERMARK -->
-  </g>
-
   <g font-family="Syne, system-ui, -apple-system, Segoe UI, Helvetica, Arial, sans-serif" text-anchor="middle">
     <!-- Mark scale/spacing aligned with hero .biz-card__front-brand flex layout -->
     <g transform="translate(482 95) scale(0.88)">
