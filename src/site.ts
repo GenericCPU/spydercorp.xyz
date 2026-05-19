@@ -12,7 +12,6 @@ export const site = {
   phone: '+1-902-441-1924',
   phoneTel: '+19024411924',
   location: 'Halifax, NS',
-  announcementCallout: 'Systems built in days not weeks',
   announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
