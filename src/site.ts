@@ -81,7 +81,7 @@ export const studioCommitments = [
   {
     id: 'personal',
     title: 'Personalized service',
-    description: 'You work directly with who designs and builds it.',
+    description: 'You work directly with me as I help build out your vision.',
   },
   {
     id: 'payment',
