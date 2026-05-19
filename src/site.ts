@@ -48,12 +48,12 @@ export const services = [
     id: 'design',
     title: 'Web design',
     description:
-      'State-driven, accessible interfaces — custom styled with headless components, not cookie-cutter templates.',
+      'Premium interfaces on every screen, built with accessible, state-driven Ark UI primitives.',
     highlights: [
-      'State-driven UI — forms, dialogs, tabs, menus & overlays',
-      'Keyboard & screen-reader accessible',
-      'Headless primitives — your brand across shops, apps & marketing surfaces',
-      'Predictable interaction state (open, close, focus, validation)',
+      'UI & component systems',
+      'Shops, carts, checkout & product flows',
+      'Ark UI — state-driven forms, dialogs & menus',
+      'Mobile-first layouts',
     ],
   },
   {
@@ -72,10 +72,10 @@ export const services = [
     title: 'Custom backend & admin',
     description: 'Admin, inventory, and internal tools beyond templates.',
     highlights: [
-      'Admin dashboards & data views',
-      'Inventory & ordering flows',
-      'Multi-step flows & role-based access',
-      'Support, roles & automation',
+      'Admin dashboards',
+      'Inventory & ordering',
+      'Support & ticketing',
+      'Workflow automation',
     ],
   },
 ] as const;
