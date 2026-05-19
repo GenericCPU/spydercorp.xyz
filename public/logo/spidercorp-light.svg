@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" role="img" aria-label="SpyderCorp">
-  <title>SpyderCorp</title>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 200" fill="none" role="img" aria-label="SpiderCorp">
+  <title>SpiderCorp</title>
   <g transform="translate(160 62)">
     <g fill="#fafafa" stroke="#E30613" stroke-width="1.2">
       <path d="M-8-18 L-28-32 L-34-48 L-30-58" />
@@ -25,6 +25,6 @@
     </g>
   </g>
   <text x="160" y="158" text-anchor="middle" font-family="system-ui, -apple-system, Segoe UI, sans-serif" font-size="28" font-weight="700" letter-spacing="0.02em">
-    <tspan fill="#fafafa">spyder</tspan><tspan fill="#E30613">corp</tspan>
+    <tspan fill="#fafafa">spider</tspan><tspan fill="#E30613">corp</tspan>
   </text>
 </svg>

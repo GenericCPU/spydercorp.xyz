@@ -24,7 +24,7 @@ async function forwardViaResend(
   const apiKey = process.env.RESEND_API_KEY?.trim();
   if (!apiKey) return null;
 
-  const from = process.env.RESEND_FROM?.trim() || 'SpyderCorp <onboarding@resend.dev>';
+  const from = process.env.RESEND_FROM?.trim() || 'SpiderCorp <onboarding@resend.dev>';
   const resend = new Resend(apiKey);
 
   const { error } = await resend.emails.send({

@@ -3,7 +3,8 @@
   <head>
     <script>
       (function () {
-        var t = localStorage.getItem('spydercorp-theme');
+        var t = localStorage.getItem('spidercorp-theme');
+        if (t == null) t = localStorage.getItem('spydercorp-theme');
         document.documentElement.setAttribute('data-theme', t === 'light' ? 'light' : 'dark');
       })();
     </script>
@@ -11,12 +12,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="SpyderCorp — web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops."
+      content="SpiderCorp — web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops."
     />
     <meta name="theme-color" content="#0a0a0a" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://spidercorp.xyz/" />
-    <title>SpyderCorp — Web · Brand · Systems</title>
+    <title>SpiderCorp — Web · Brand · Systems</title>
 
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -26,29 +27,29 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://spidercorp.xyz/" />
-    <meta property="og:site_name" content="SpyderCorp" />
-    <meta property="og:title" content="SpyderCorp — Web · Brand · Systems" />
+    <meta property="og:site_name" content="SpiderCorp" />
+    <meta property="og:title" content="SpiderCorp — Web · Brand · Systems" />
     <meta
       property="og:description"
       content="Web, brand, custom systems, and engineering for local businesses and product teams. Halifax, NS."
     />
-    <meta property="og:image" content="https://spidercorp.xyz/og.jpg?v=4" />
-    <meta property="og:image:secure_url" content="https://spidercorp.xyz/og.jpg?v=4" />
+    <meta property="og:image" content="https://spidercorp.xyz/og.jpg?v=5" />
+    <meta property="og:image:secure_url" content="https://spidercorp.xyz/og.jpg?v=5" />
     <meta property="og:image:type" content="image/jpeg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="SpyderCorp business card — spidercorp.xyz" />
+    <meta property="og:image:alt" content="SpiderCorp business card — spidercorp.xyz" />
     <meta property="og:locale" content="en_CA" />
 
     <!-- Twitter / X -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="SpyderCorp — Web · Brand · Systems" />
+    <meta name="twitter:title" content="SpiderCorp — Web · Brand · Systems" />
     <meta
       name="twitter:description"
       content="Web, brand, custom systems, and engineering for local businesses and product teams."
     />
-    <meta name="twitter:image" content="https://spidercorp.xyz/og.jpg?v=4" />
-    <meta name="twitter:image:alt" content="SpyderCorp business card — spidercorp.xyz" />
+    <meta name="twitter:image" content="https://spidercorp.xyz/og.jpg?v=5" />
+    <meta name="twitter:image:alt" content="SpiderCorp business card — spidercorp.xyz" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

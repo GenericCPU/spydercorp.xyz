@@ -21,7 +21,7 @@ async function submitViaWeb3Forms(
         access_key: accessKey,
         name: payload.name,
         email: payload.email,
-        subject: 'Project inquiry — SpyderCorp',
+        subject: 'Project inquiry — SpiderCorp',
         message: buildMessage(payload.projectType, payload.message),
       }),
     });

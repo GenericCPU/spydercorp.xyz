@@ -1,4 +1,4 @@
-import markSvg from '../assets/spydercorp-mark.svg?raw';
+import markSvg from '../assets/spidercorp-mark.svg?raw';
 import './Logo.css';
 
 type LogoProps = {
@@ -13,7 +13,7 @@ function LogoMark({ variant, className }: { variant: 'compact' | 'mark'; classNa
     <span
       className={`logo-mark logo-mark--${variant} ${className}`.trim()}
       role="img"
-      aria-label="SpyderCorp"
+      aria-label="SpiderCorp"
       dangerouslySetInnerHTML={{ __html: markHtml }}
     />
   );
@@ -28,8 +28,8 @@ export function Logo({ variant = 'full', className = '' }: LogoProps) {
   return (
     <span className={`logo-frame logo-frame--full ${className}`.trim()}>
       <img
-        src="/logo/spydercorp.svg"
-        alt="SpyderCorp"
+        src="/logo/spidercorp.svg"
+        alt="SpiderCorp"
         className="logo-frame__img"
         width={320}
         height={100}

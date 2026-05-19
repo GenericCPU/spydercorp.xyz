@@ -1,4 +1,4 @@
-# SpyderCorp business cards
+# SpiderCorp business cards
 
 Print-ready assets for standard US business cards.
 

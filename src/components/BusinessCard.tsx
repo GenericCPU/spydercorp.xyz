@@ -1,5 +1,5 @@
 import { useCallback, useId, useState } from 'react';
-import markSvg from '../assets/spydercorp-mark.svg?raw';
+import markSvg from '../assets/spidercorp-mark.svg?raw';
 import { site } from '../site';
 import './BusinessCard.css';
 

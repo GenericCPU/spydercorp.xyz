@@ -1,8 +1,8 @@
 export const site = {
   url: 'https://spidercorp.xyz',
   domain: 'spidercorp.xyz',
-  brand: 'SpyderCorp',
-  title: 'SpyderCorp — Web · Brand · Systems',
+  brand: 'SpiderCorp',
+  title: 'SpiderCorp — Web · Brand · Systems',
   description:
     'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   heroTitle: 'Premium web & custom architecture for your business.',

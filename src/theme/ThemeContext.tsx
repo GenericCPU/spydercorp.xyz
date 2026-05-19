@@ -10,7 +10,8 @@ import {
 
 export type Theme = 'dark' | 'light';
 
-const STORAGE_KEY = 'spydercorp-theme';
+const LEGACY_THEME_KEY = 'spydercorp-theme';
+const STORAGE_KEY = 'spidercorp-theme';
 
 interface ThemeContextValue {
   theme: Theme;
@@ -22,7 +23,8 @@ const ThemeContext = createContext<ThemeContextValue | null>(null);
 
 function getInitialTheme(): Theme {
   if (typeof window === 'undefined') return 'dark';
-  const stored = localStorage.getItem(STORAGE_KEY);
+  const stored =
+    localStorage.getItem(STORAGE_KEY) ?? localStorage.getItem(LEGACY_THEME_KEY);
   return stored === 'light' ? 'light' : 'dark';
 }
 
