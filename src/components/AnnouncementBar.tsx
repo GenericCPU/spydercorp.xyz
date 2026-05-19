@@ -4,7 +4,9 @@ import './AnnouncementBar.css';
 export function AnnouncementBar() {
   return (
     <div className="announcement" role="status">
-      <span className="announcement__callout">{site.announcementCallout}</span>
+      <span className="announcement__callout">
+        Systems built in days <span className="text-accent">not weeks</span>
+      </span>
       <span className="announcement__sep announcement__sep--cta" aria-hidden>
         ·
       </span>
