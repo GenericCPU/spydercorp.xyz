@@ -47,18 +47,24 @@ export const services = [
   {
     id: 'design',
     title: 'Web design',
-    description: 'Premium interfaces that work on every screen.',
-    highlights: ['UI & component systems', 'Shops & checkout flows', 'Landing pages', 'Mobile-first layouts'],
+    description:
+      'State-driven, accessible interfaces — custom styled with headless components, not cookie-cutter templates.',
+    highlights: [
+      'State-driven UI (forms, dialogs, tabs)',
+      'Keyboard & screen-reader accessible',
+      'Headless primitives — your brand, your rules',
+      'Shops, checkout & landing pages',
+    ],
   },
   {
     id: 'engineering',
     title: 'Full-stack engineering',
-    description: 'React, TypeScript, and APIs shipped end to end.',
+    description: 'React, TypeScript, and Ark UI — reliable interactions powered by state machines.',
     highlights: [
-      'React & TypeScript',
+      'Ark UI (forms, selects, dialogs, toasts)',
+      'Predictable state-driven behavior',
       'APIs & third-party integrations',
-      'Databases & auth',
-      'Performance & deployment',
+      'Databases, auth & deployment',
     ],
   },
   {
@@ -66,10 +72,10 @@ export const services = [
     title: 'Custom backend & admin',
     description: 'Admin, inventory, and internal tools beyond templates.',
     highlights: [
-      'Admin dashboards',
-      'Inventory & ordering',
-      'Support & ticketing',
-      'Workflow automation',
+      'Admin dashboards & data views',
+      'Inventory & ordering flows',
+      'Tabs, accordions & multi-step UI',
+      'Support, roles & automation',
     ],
   },
 ] as const;
@@ -142,6 +148,6 @@ export const faq = [
     id: 'stack',
     question: 'What do I actually get?',
     answer:
-      'A fast, maintainable stack (React, TypeScript, accessible UI primitives) plus the strategy behind it — and full ownership of what we build for you.',
+      'A fast, maintainable stack (React, TypeScript, Ark UI) — state-driven, accessible components you own, plus the strategy behind it.',
   },
 ] as const;
