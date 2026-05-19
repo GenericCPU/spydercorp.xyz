@@ -22,7 +22,7 @@ export const site = {
   heroStats: [
     {
       label: 'Front of house',
-      detail: 'Brand, product UI, and storefronts your customers touch',
+      detail: 'Brand, product UI, and storefronts your customers depend on',
     },
     {
       label: 'Back of house',
