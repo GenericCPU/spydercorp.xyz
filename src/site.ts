@@ -8,7 +8,7 @@ export const site = {
   heroTitle: 'Premium web & custom architecture for your business.',
   tagline: 'Web, brand, and systems — built to fit how you actually operate.',
   heroSub:
-    "You don't need a full-time developer — we build turnkey systems that last.",
+    "You don't need a full-time developer; we build turnkey systems that last.",
   email: 'brandongcryderman@gmail.com',
   phone: '+1-902-441-1924',
   phoneTel: '+19024411924',
