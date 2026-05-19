@@ -6,8 +6,8 @@ export const site = {
   description:
     'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   heroTitle: 'Premium web & custom architecture, built for your business.',
-  tagline: 'Web, brand, and systems—built around how you work.',
-  heroSub: 'Turnkey systems that last—no full-time developer required.',
+  tagline: 'Web, brand, and systems, built around how you work.',
+  heroSub: 'Turnkey systems that last. No full-time developer required.',
   email: 'brandongcryderman@gmail.com',
   phone: '+1-902-441-1924',
   phoneTel: '+19024411924',
@@ -16,7 +16,7 @@ export const site = {
   announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
-    'Marketing, design, engineering, and custom systems from one partner—not a stack of separate agencies. We work with you one-on-one, with payment that fits your business, including pro bono opportunities for qualifying local small businesses.',
+    'Marketing, design, engineering, and custom systems from one partner, not a stack of separate agencies. We work with you one-on-one, with payment that fits your business, including pro bono opportunities for qualifying local small businesses.',
 } as const;
 
 export const services = [
