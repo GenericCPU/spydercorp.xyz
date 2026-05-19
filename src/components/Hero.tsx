@@ -16,9 +16,7 @@ export function Hero() {
             <span className="text-accent">No ceiling.</span>
           </h1>
 
-          <p className="hero__lead">{site.tagline}</p>
-
-          <p className="hero__sub">{site.heroSub}</p>
+          <p className="hero__lead">{site.heroLead}</p>
           <p className="hero__location">Based in {site.location}</p>
 
           <div className="hero__actions">

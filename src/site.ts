@@ -6,8 +6,8 @@ export const site = {
   description:
     'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   heroTitle: 'Premium web & custom architecture, built for your business.',
-  tagline: 'Web, brand, and systems, built around how you work.',
-  heroSub: 'Turnkey systems that last. No full-time developer required.',
+  heroLead:
+    'Web, brand, and systems, built around how you work. Turnkey systems that last. No full-time developer required.',
   servicesSectionNote:
     'We optimize for maximum efficiency, which means low monthly costs to maintain your site.',
   email: 'brandongcryderman@gmail.com',
