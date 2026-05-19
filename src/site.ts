@@ -17,7 +17,7 @@ export const site = {
   announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
-    'We serve all your software development needs — highly agile delivery in one cohesive stack, from brand and design through full-stack engineering. One partner from what your customers see to the systems that run your business. Flexible payment and pro bono for qualifying local small businesses.',
+    'One cohesive stack from brand and design through full-stack engineering — one partner from what your customers see to the systems that run your business.',
   workSectionLabel: 'Work',
   workSectionTitle: 'Recent projects',
   contactSectionLead: 'I look forward to helping your business grow.',
@@ -90,11 +90,6 @@ export const studioCommitments = [
     id: 'payment',
     title: 'Flexible payment',
     description: 'Project, retainer, trade, or milestones that fit your cash flow.',
-  },
-  {
-    id: 'probono',
-    title: 'Pro bono for local small businesses',
-    description: 'Ask honestly — we will tell you if it is a fit.',
   },
 ] as const;
 
