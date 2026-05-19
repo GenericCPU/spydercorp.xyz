@@ -16,7 +16,7 @@ export const site = {
   announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
-    'Marketing, design, engineering, and custom systems from one partner, not a stack of separate agencies. We work with you one-on-one, with payment that fits your business, including pro bono opportunities for qualifying local small businesses.',
+    'Marketing, design, engineering, and custom systems from one partner. We work with you one-on-one, with payment that fits your business, including pro bono opportunities for qualifying local small businesses.',
 } as const;
 
 export const services = [
