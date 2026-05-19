@@ -17,7 +17,7 @@ export const site = {
   announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
-    'We serve all your software development needs — highly agile delivery in one cohesive stack, from brand and design through full-stack engineering. One partner from UI to database. Flexible payment and pro bono for qualifying local small businesses.',
+    'We serve all your software development needs — highly agile delivery in one cohesive stack, from brand and design through full-stack engineering. One partner from what your customers see to the systems that run your business. Flexible payment and pro bono for qualifying local small businesses.',
   workSectionLabel: 'Work',
   workSectionTitle: 'Recent projects',
   contactSectionLead: 'I look forward to helping your business grow.',
