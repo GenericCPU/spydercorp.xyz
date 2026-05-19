@@ -43,11 +43,11 @@ function readImageSize(filePath) {
 }
 
 const projectOrder = [
-  'bringmebuds',
   'handcash',
   'LilPoker',
   'Soundbase.click',
   'BrainrotGamez',
+  'bringmebuds',
 ];
 
 const projectMeta = {
