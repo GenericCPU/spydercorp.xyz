@@ -9,7 +9,6 @@ export function Work() {
         <header className="section-header">
           <p className="section-label">{site.workSectionLabel}</p>
           <h2 className="section-title">{site.workSectionTitle}</h2>
-          <p className="section-lead">{site.workSectionLead}</p>
         </header>
 
         <WorkGallery />

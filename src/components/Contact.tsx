@@ -77,10 +77,7 @@ export function Contact() {
         <header className="section-header">
           <p className="section-label">Contact</p>
           <h2 className="section-title">Start a thread.</h2>
-          <p className="section-lead">
-            New builds, redesigns, and custom systems welcome. Flexible on budget — project rate,
-            retainer, donation, or trade.
-          </p>
+          <p className="section-lead">{site.contactSectionLead}</p>
         </header>
 
         <div className="contact__panel panel">
@@ -164,7 +161,6 @@ export function Contact() {
                     </Select.Content>
                   </Select.Positioner>
                 </Select.Root>
-                <Field.HelperText>Helps us reply with a realistic timeline.</Field.HelperText>
               </Field.Root>
 
               <Field.Root className="sc-field" required>
