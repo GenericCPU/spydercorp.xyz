@@ -50,21 +50,21 @@ export const services = [
     description:
       'State-driven, accessible interfaces — custom styled with headless components, not cookie-cutter templates.',
     highlights: [
-      'State-driven UI (forms, dialogs, tabs)',
+      'State-driven UI — forms, dialogs, tabs, menus & overlays',
       'Keyboard & screen-reader accessible',
-      'Headless primitives — your brand, your rules',
-      'Shops, checkout & landing pages',
+      'Headless primitives — your brand across shops, apps & marketing surfaces',
+      'Predictable interaction state (open, close, focus, validation)',
     ],
   },
   {
     id: 'engineering',
     title: 'Full-stack engineering',
-    description: 'React, TypeScript, and Ark UI — reliable interactions powered by state machines.',
+    description: 'React, TypeScript, and APIs shipped end to end.',
     highlights: [
-      'Ark UI (forms, selects, dialogs, toasts)',
-      'Predictable state-driven behavior',
+      'React & TypeScript',
       'APIs & third-party integrations',
-      'Databases, auth & deployment',
+      'Databases & auth',
+      'Performance & deployment',
     ],
   },
   {
@@ -74,7 +74,7 @@ export const services = [
     highlights: [
       'Admin dashboards & data views',
       'Inventory & ordering flows',
-      'Tabs, accordions & multi-step UI',
+      'Multi-step flows & role-based access',
       'Support, roles & automation',
     ],
   },
@@ -148,6 +148,6 @@ export const faq = [
     id: 'stack',
     question: 'What do I actually get?',
     answer:
-      'A fast, maintainable stack (React, TypeScript, Ark UI) — state-driven, accessible components you own, plus the strategy behind it.',
+      'A fast, maintainable stack (React, TypeScript, accessible UI primitives) plus the strategy behind it — and full ownership of what we build for you.',
   },
 ] as const;
