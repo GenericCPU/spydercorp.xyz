@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type MouseEvent } from 'react';
 import { Moon, Sun } from 'lucide-react';
 import { useActiveSection } from '../hooks/useActiveSection';
 import { navLinks, navSectionIds } from '../nav';
@@ -6,6 +6,17 @@ import { Logo } from './Logo';
 import { site } from '../site';
 import { useTheme } from '../theme/ThemeContext';
 import './Header.css';
+
+function refreshHome(e: MouseEvent<HTMLAnchorElement>) {
+  e.preventDefault();
+  const atRoot =
+    window.location.pathname === '/' || window.location.pathname.endsWith('/index.html');
+  if (atRoot && !window.location.hash) {
+    window.location.reload();
+    return;
+  }
+  window.location.href = '/';
+}
 
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
@@ -22,7 +33,7 @@ export function Header() {
   return (
     <header className={`header ${scrolled ? 'header--scrolled' : ''}`}>
       <div className="header__shell">
-        <a href="#" className="header__brand" aria-label={`${site.brand} home`}>
+        <a href="/" className="header__brand" aria-label={`${site.brand} home`} onClick={refreshHome}>
           <Logo variant="mark" />
           <span className="header__brand-text">{site.domain}</span>
         </a>
