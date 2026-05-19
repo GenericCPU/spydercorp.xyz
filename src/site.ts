@@ -18,7 +18,7 @@ export const site = {
     'Marketing, design, engineering, and custom systems from one partner. We work with you one-on-one, with payment that fits your business, including pro bono opportunities for qualifying local small businesses.',
   workSectionLabel: 'Work',
   workSectionTitle: 'Recent projects',
-  contactSectionLead: 'I look forward to working with you.',
+  contactSectionLead: 'I look forward to helping your business grow.',
   heroStats: [
     {
       label: 'Front of house',
