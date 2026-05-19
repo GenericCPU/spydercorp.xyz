@@ -91,9 +91,9 @@ export function BusinessCard() {
                     ))}
                   </ul>
                   <p className="biz-card__footnote">
-                    Project · retainer
+                    Pay per project or month-to-month
                     <br />
-                    Pro bono opportunities for local small businesses
+                    Pro bono for qualifying local small businesses
                   </p>
                 </div>
                 <div
