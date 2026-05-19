@@ -42,25 +42,35 @@ export const services = [
     id: 'brand',
     title: 'Brand & marketing',
     description: 'Positioning and visibility so the right people find you.',
-    highlights: ['Brand & messaging', 'Local SEO'],
+    highlights: ['Brand & messaging', 'Local SEO', 'Social & campaign assets', 'Google Business setup'],
   },
   {
     id: 'design',
     title: 'Web design',
     description: 'Premium interfaces that work on every screen.',
-    highlights: ['UI systems', 'Shops & landing pages'],
+    highlights: ['UI & component systems', 'Shops & checkout flows', 'Landing pages', 'Mobile-first layouts'],
   },
   {
     id: 'engineering',
     title: 'Full-stack engineering',
     description: 'React, TypeScript, and APIs shipped end to end.',
-    highlights: ['Frontends & APIs', 'Integrations'],
+    highlights: [
+      'React & TypeScript',
+      'APIs & third-party integrations',
+      'Databases & auth',
+      'Performance & deployment',
+    ],
   },
   {
     id: 'systems',
     title: 'Custom backend & admin',
     description: 'Admin, inventory, and internal tools beyond templates.',
-    highlights: ['Dashboards', 'Inventory & orders'],
+    highlights: [
+      'Admin dashboards',
+      'Inventory & ordering',
+      'Support & ticketing',
+      'Workflow automation',
+    ],
   },
 ] as const;
 
