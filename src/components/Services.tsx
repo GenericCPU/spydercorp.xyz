@@ -55,7 +55,6 @@ export function Services() {
           <p className="section-label">Services</p>
           <h2 className="section-title">One studio. Full stack.</h2>
           <p className="section-lead">{site.servicesSectionLead}</p>
-          <p className="services__note">{site.servicesSectionNote}</p>
         </header>
 
         <div className="services__commitments panel" role="list">

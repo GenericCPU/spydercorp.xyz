@@ -7,8 +7,6 @@ export const site = {
     'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   heroTitle: 'Premium web & custom architecture, built for your business.',
   heroLead: 'Turnkey systems that last. No full-time developer required.',
-  servicesSectionNote:
-    'We optimize for maximum efficiency, which means low monthly costs to maintain your site.',
   email: 'brandongcryderman@gmail.com',
   phone: '+1-902-441-1924',
   phoneTel: '+19024411924',
