@@ -1,6 +1,6 @@
 import { Tabs } from '@ark-ui/react/tabs';
 import { Check, Code2, HandHeart, HandCoins, Megaphone, Palette, Server, UserRound } from 'lucide-react';
-import { services, studioCommitments } from '../site';
+import { services, site, studioCommitments } from '../site';
 import './Services.css';
 
 const icons = {
@@ -54,11 +54,7 @@ export function Services() {
         <header className="section-header">
           <p className="section-label">Services</p>
           <h2 className="section-title">One studio. Full stack.</h2>
-          <p className="section-lead">
-            Marketing, design, engineering, and custom systems — not siloed vendors. We work with
-            you one-on-one, with payment that fits your business, including pro bono opportunities
-            for qualifying local small businesses.
-          </p>
+          <p className="section-lead">{site.servicesSectionLead}</p>
         </header>
 
         <div className="services__commitments panel" role="list">

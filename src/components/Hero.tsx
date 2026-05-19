@@ -19,7 +19,8 @@ export function Hero() {
           <p className="hero__lead">{site.tagline}</p>
 
           <p className="hero__sub">
-            {site.heroSub} Based in {site.location}.
+            {site.heroSub}
+            <span className="hero__location"> Based in {site.location}</span>
           </p>
 
           <div className="hero__actions">
