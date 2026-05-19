@@ -82,7 +82,7 @@ export function Contact() {
 
         <div className="contact__panel panel">
           <aside className="contact__aside">
-            <h3 className="contact__aside-title">Reach us</h3>
+            <h3 className="contact__aside-title">Reach out</h3>
             <ul className="contact__meta">
               <li>
                 <Mail size={18} aria-hidden />
