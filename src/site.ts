@@ -19,7 +19,7 @@ export const site = {
   workSectionLabel: 'Work',
   workSectionTitle: 'Recent projects',
   workSectionLead:
-    'Product UI and full-stack builds for shops, wallets, games, and tools. Click any screenshot to view full size.',
+    'Product UI and full-stack builds for shops, wallets, games, and tools.',
   heroStats: [
     {
       label: 'Front of house',
