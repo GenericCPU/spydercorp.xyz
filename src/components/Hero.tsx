@@ -19,8 +19,7 @@ export function Hero() {
           <p className="hero__lead">{site.tagline}</p>
 
           <p className="hero__sub">
-            Storefronts, landing pages, admin panels, inventory, ordering, and support tooling —
-            one partner from brand to backend. Based in {site.location}.
+            {site.heroSub} Based in {site.location}.
           </p>
 
           <div className="hero__actions">
