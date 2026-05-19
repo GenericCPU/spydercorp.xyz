@@ -54,8 +54,9 @@ export function BusinessCard() {
                   </div>
                 </div>
                 <p className="biz-card__tagline">
-                  <span>Web, brand, and systems — built to fit</span>
-                  <span>how you actually operate.</span>
+                  {site.heroLeadLines.map((line) => (
+                    <span key={line}>{line}</span>
+                  ))}
                 </p>
               </div>
             </article>
