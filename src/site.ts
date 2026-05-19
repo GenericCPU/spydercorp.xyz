@@ -134,24 +134,24 @@ export const faq = [
     id: 'cost',
     question: 'What does a project cost?',
     answer:
-      'It depends on what you need — a simple site is not the same as a shop with custom ordering behind the scenes. We quote after a short conversation. Payment can be per project, month to month, trade, or another arrangement that fits how you run things.',
+      'It depends on what you need — from a focused landing page to a shop with custom ordering behind the scenes. We quote after a short conversation. Payment can be per project, month to month, trade, or another arrangement that fits how you run things.',
   },
   {
     id: 'systems',
     question: 'Can you build more than a website?',
     answer:
-      'Yes. Shops, ordering, inventory, admin panels, support tools — if it helps you run the business online, we can talk it through. We will tell you honestly if something is outside what we should take on.',
+      'Yes. Shops, ordering, inventory, admin panels, support tools — if it helps you run the business online, we can talk it through. We scope honestly up front so you know what is included before we start.',
   },
   {
     id: 'timeline',
     question: 'How long does it take?',
     answer:
-      'A focused site can go live quickly. Bigger builds take longer. After one call you get a realistic timeline — not a vague “we will see.”',
+      'A focused site can go live quickly. Bigger builds take longer. After one call you get a clear timeline with real dates.',
   },
   {
     id: 'ownership',
     question: 'What do I actually get?',
     answer:
-      'Something built for your business, not a rented template. You own what we deliver. When you are ready, we help you host it yourself so you stay in control — without ongoing fees to keep the site alive.',
+      'A site or system built for your business. You own what we deliver. When you are ready, we help you host it yourself — you stay in control of the code and your ongoing costs.',
   },
 ] as const;
