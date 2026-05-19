@@ -36,7 +36,7 @@ export function BusinessCard() {
         onClick={toggle}
         aria-pressed={flipped}
         aria-describedby={hintId}
-        aria-label={flipped ? 'Business card, back. Click to show front.' : 'Business card, front. Click to show back.'}
+        aria-label={flipped ? 'Business card, back. Click to flip.' : 'Business card, front. Click to flip.'}
       >
         <div className="biz-card__scene">
           {!flipped ? (
@@ -107,7 +107,7 @@ export function BusinessCard() {
         </div>
       </button>
       <p id={hintId} className="biz-card__hint">
-        {flipped ? 'Click to show front' : 'Click to flip'}
+        Click to flip
       </p>
     </div>
   );
