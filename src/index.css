@@ -63,6 +63,8 @@
   --on-accent: #ffffff;
   --grid-line: rgba(10, 10, 10, 0.06);
   --shot-bg: #ebebeb;
+  --topbar-bg: color-mix(in srgb, var(--bg-elevated) 92%, transparent);
+  --topbar-bg-scrolled: color-mix(in srgb, var(--bg-elevated) 98%, transparent);
 }
 
 *,

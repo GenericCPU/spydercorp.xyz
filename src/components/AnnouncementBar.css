@@ -25,7 +25,7 @@
 }
 
 .announcement__callout {
-  color: #fff;
+  color: var(--text);
   white-space: nowrap;
   flex-shrink: 0;
 }
@@ -68,5 +68,6 @@
 }
 
 [data-theme='light'] .announcement {
-  background: color-mix(in srgb, var(--accent) 62%, #0a0a0a);
+  background: color-mix(in srgb, var(--accent-muted) 65%, var(--bg-elevated));
+  border-bottom-color: var(--border);
 }
