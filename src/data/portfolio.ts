@@ -7,8 +7,6 @@ export const portfolio = [
     "url": "https://bringmebuds.vercel.app",
     "description": "Full shop rebuild — browse, cart, coupons, delivery logic. Mobile-first UX designed to reduce friction and complete more orders.",
     "tags": [
-      "E-commerce UX",
-      "Brand",
       "Engineering"
     ],
     "shots": [
@@ -37,8 +35,6 @@ export const portfolio = [
     "url": "https://handcash.io",
     "description": "Wallet and payments product UI — consumer fintech flows built for clarity and speed.",
     "tags": [
-      "Product UI",
-      "Fintech",
       "Engineering"
     ],
     "shots": [
@@ -119,8 +115,6 @@ export const portfolio = [
     "url": "",
     "description": "Playful game storefront and discovery experience with bold visuals and fast browse-to-play paths.",
     "tags": [
-      "Games",
-      "Web design",
       "Engineering"
     ],
     "shots": [

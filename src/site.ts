@@ -16,6 +16,10 @@ export const site = {
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
     'Marketing, design, engineering, and custom systems from one partner. We work with you one-on-one, with payment that fits your business, including pro bono opportunities for qualifying local small businesses.',
+  workSectionLabel: 'Work',
+  workSectionTitle: 'Recent projects',
+  workSectionLead:
+    'Product UI and full-stack builds for shops, wallets, games, and tools. Click any screenshot to view full size.',
 } as const;
 
 export const services = [

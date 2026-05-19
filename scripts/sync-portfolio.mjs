@@ -57,7 +57,7 @@ const projectMeta = {
     url: 'https://bringmebuds.vercel.app',
     description:
       'Full shop rebuild — browse, cart, coupons, delivery logic. Mobile-first UX designed to reduce friction and complete more orders.',
-    tags: ['E-commerce UX', 'Brand', 'Engineering'],
+    tags: ['Engineering'],
   },
   handcash: {
     title: 'HandCash',
@@ -78,14 +78,14 @@ const projectMeta = {
     category: 'Games · Web',
     url: '',
     description: 'Poker product interface — table-ready layouts and focused player flows.',
-    tags: ['Games', 'UI/UX', 'Engineering'],
+    tags: ['Engineering'],
   },
   'Soundbase.click': {
     title: 'Soundbase.click',
     category: 'Audio · Web',
     url: 'https://soundbase.click',
     description: 'Music/audio platform UI — discovery, playback, and creator-facing surfaces.',
-    tags: ['Audio', 'Web app', 'Design'],
+    tags: ['Engineering'],
   },
 };
 
