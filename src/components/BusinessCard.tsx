@@ -39,8 +39,8 @@ export function BusinessCard() {
         aria-label={flipped ? 'Business card, back. Click to show front.' : 'Business card, front. Click to show back.'}
       >
         <div className="biz-card__scene">
-          <div className={`biz-card__inner${flipped ? ' biz-card__inner--flipped' : ''}`}>
-            <article className="biz-card__face biz-card__face--front" aria-hidden={flipped}>
+          {!flipped ? (
+            <article className="biz-card__face biz-card__face--front">
               <div className="biz-card__accent biz-card__accent--bottom" />
               <div className="biz-card__front-body">
                 <div className="biz-card__front-brand">
@@ -59,8 +59,8 @@ export function BusinessCard() {
                 </p>
               </div>
             </article>
-
-            <article className="biz-card__face biz-card__face--back" aria-hidden={!flipped}>
+          ) : (
+            <article className="biz-card__face biz-card__face--back">
               <div className="biz-card__accent biz-card__accent--left" />
               <div className="biz-card__back-body">
                 <div className="biz-card__back-col biz-card__back-col--contact">
@@ -103,7 +103,7 @@ export function BusinessCard() {
                 />
               </div>
             </article>
-          </div>
+          )}
         </div>
       </button>
       <p id={hintId} className="biz-card__hint">
