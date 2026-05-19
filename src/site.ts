@@ -48,12 +48,12 @@ export const services = [
     id: 'design',
     title: 'Web design',
     description:
-      'Premium interfaces on every screen, built with accessible, state-driven Ark UI primitives.',
+      'Premium interfaces that are accessible, state-driven, and dependable on every screen.',
     highlights: [
       'UI & component systems',
       'Shops, carts, checkout & product flows',
-      'Ark UI — state-driven forms, dialogs & menus',
-      'Mobile-first layouts',
+      'State-driven forms, dialogs & menus',
+      'Dependable keyboard and screen-reader support',
     ],
   },
   {
