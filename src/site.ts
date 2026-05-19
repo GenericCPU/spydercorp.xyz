@@ -134,24 +134,24 @@ export const faq = [
     id: 'cost',
     question: 'What does a project cost?',
     answer:
-      'Depends on scope — a landing page is different from a full shop plus custom admin. Flexible arrangements: project rate, retainer, donation, or trade when it’s a fit.',
+      'It depends on what you need — a simple site is not the same as a shop with custom ordering behind the scenes. We quote after a short conversation. Payment can be per project, month to month, trade, or another arrangement that fits how you run things.',
   },
   {
     id: 'systems',
-    question: 'Can you build custom admin or inventory tools?',
+    question: 'Can you build more than a website?',
     answer:
-      'Yes. Ordering flows, inventory, support tickets, internal dashboards — we’re not limited to marketing sites. Tell us what you need to run the business; we’ll scope it honestly.',
+      'Yes. Shops, ordering, inventory, admin panels, support tools — if it helps you run the business online, we can talk it through. We will tell you honestly if something is outside what we should take on.',
   },
   {
     id: 'timeline',
     question: 'How long does it take?',
     answer:
-      'Focused sites can ship in days. Larger builds (shop + admin + integrations) take longer. You get a straight timeline after a short call.',
+      'A focused site can go live quickly. Bigger builds take longer. After one call you get a realistic timeline — not a vague “we will see.”',
   },
   {
-    id: 'stack',
+    id: 'ownership',
     question: 'What do I actually get?',
     answer:
-      'A fast, maintainable stack (React, TypeScript, accessible UI primitives) plus the strategy behind it — and full ownership of what we build for you.',
+      'Something built for your business, not a rented template. You own what we deliver. When you are ready, we help you host it yourself so you stay in control — without ongoing fees to keep the site alive.',
   },
 ] as const;
