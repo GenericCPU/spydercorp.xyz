@@ -11,7 +11,7 @@ export function Hero() {
           <p className="hero__eyebrow">Marketing · Design · Engineering · Systems</p>
 
           <h1 className="hero__title">
-            Premium web &amp; custom systems.
+            Your brand, premium web &amp; custom systems.
             <br />
             <span className="text-accent">No ceiling.</span>
           </h1>

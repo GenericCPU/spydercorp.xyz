@@ -7,7 +7,7 @@ export const site = {
     'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   tagline: 'Web, brand, and systems — built to fit how you actually operate.',
   heroSub:
-    'Full software customization and custom architecture — lightweight, premium, and built around how you work.',
+    'Full software customization and custom sustainable architecture — lightweight, premium, and built around how you work.',
   email: 'brandongcryderman@gmail.com',
   phone: '+1-902-441-1924',
   phoneTel: '+19024411924',
