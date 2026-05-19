@@ -47,7 +47,7 @@ export const services = [
     id: 'design',
     title: 'Web design',
     description:
-      'Premium interfaces that are accessible, state-driven, and dependable on every screen.',
+      'Premium interfaces that are accessible and dependable on every screen.',
     highlights: [
       'UI & component systems',
       'Shops, carts, checkout & product flows',
