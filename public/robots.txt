@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://spydercorp.xyz/sitemap.xml
+Sitemap: https://spidercorp.xyz/sitemap.xml

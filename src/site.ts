@@ -1,6 +1,6 @@
 export const site = {
-  url: 'https://spydercorp.xyz',
-  domain: 'spydercorp.xyz',
+  url: 'https://spidercorp.xyz',
+  domain: 'spidercorp.xyz',
   brand: 'SpyderCorp',
   title: 'SpyderCorp — Web · Brand · Systems',
   description:

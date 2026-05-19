@@ -57,11 +57,6 @@ export function BusinessCard() {
                   <span>Web, brand, and systems — built to fit</span>
                   <span>how you actually operate.</span>
                 </p>
-                <div
-                  className="biz-card__mark biz-card__mark--watermark"
-                  aria-hidden
-                  dangerouslySetInnerHTML={{ __html: markHtml }}
-                />
               </div>
             </article>
 
