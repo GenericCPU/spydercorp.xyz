@@ -90,6 +90,11 @@ export const studioCommitments = [
     title: 'Flexible payment',
     description: 'Project, retainer, trade, or milestones that fit your cash flow.',
   },
+  {
+    id: 'probono',
+    title: 'Pro bono for local small businesses',
+    description: 'Ask honestly — we will tell you if it is a fit.',
+  },
 ] as const;
 
 export const process = [

@@ -1,5 +1,5 @@
 import { Tabs } from '@ark-ui/react/tabs';
-import { Check, Code2, HandCoins, Megaphone, Palette, Server, UserRound } from 'lucide-react';
+import { Check, Code2, HandCoins, HandHeart, Megaphone, Palette, Server, UserRound } from 'lucide-react';
 import { services, site, studioCommitments } from '../site';
 import './Services.css';
 
@@ -13,6 +13,7 @@ const icons = {
 const commitmentIcons = {
   personal: UserRound,
   payment: HandCoins,
+  probono: HandHeart,
 } as const;
 
 function ServiceCard({
