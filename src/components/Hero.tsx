@@ -18,10 +18,8 @@ export function Hero() {
 
           <p className="hero__lead">{site.tagline}</p>
 
-          <p className="hero__sub">
-            {site.heroSub}
-            <span className="hero__location"> Based in {site.location}</span>
-          </p>
+          <p className="hero__sub">{site.heroSub}</p>
+          <p className="hero__location">Based in {site.location}</p>
 
           <div className="hero__actions">
             <a href="#contact" className="btn btn-primary">
