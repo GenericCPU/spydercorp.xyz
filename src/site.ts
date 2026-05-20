@@ -21,7 +21,7 @@ export const site = {
     'Brand, design, and engineering in one thread — one partner for your site, your tools, and the systems that run your business.',
   workSectionLabel: 'Work',
   workSectionTitle: 'Recent projects',
-  contactSectionLead: 'I look forward to helping your business grow.',
+  contactSectionLead: 'I look forward to helping you grow your business.',
   heroStats: [
     {
       label: 'Front of house',
