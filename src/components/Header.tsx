@@ -66,7 +66,7 @@ export function Header() {
             {isDark ? <Moon size={18} strokeWidth={1.75} /> : <Sun size={18} strokeWidth={1.75} />}
           </button>
           <a href="#contact" className="btn btn-primary header__cta">
-            Start a project
+            Start here
           </a>
         </div>
       </div>
