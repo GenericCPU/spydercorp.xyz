@@ -103,9 +103,10 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
           if (!open) lightbox.close();
         }}
       >
-        <Dialog.Backdrop className="work-lightbox-backdrop" />
-        <Dialog.Positioner className="work-lightbox-positioner">
-          <Dialog.Content className="work-lightbox">
+        <Dialog.Portal>
+          <Dialog.Backdrop className="work-lightbox-backdrop" />
+          <Dialog.Positioner className="work-lightbox-positioner">
+            <Dialog.Content className="work-lightbox">
             <Dialog.Title className="sr-only">
               {lightbox.current?.alt ?? project.title}
             </Dialog.Title>
@@ -155,8 +156,9 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
                 <img src={lightbox.current.src} alt={lightbox.current.alt} />
               </figure>
             )}
-          </Dialog.Content>
-        </Dialog.Positioner>
+            </Dialog.Content>
+          </Dialog.Positioner>
+        </Dialog.Portal>
       </Dialog.Root>
     </article>
   );

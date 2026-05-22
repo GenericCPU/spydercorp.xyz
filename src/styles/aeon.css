@@ -82,7 +82,9 @@
   text-align: left;
 }
 
-.sc-select-item:hover {
+.sc-select-item:hover,
+.sc-select-item[data-aeon-state='highlighted'],
+.sc-select-item[data-highlighted] {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
 }

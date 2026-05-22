@@ -142,19 +142,20 @@ export function Contact() {
                   disabled={status === 'sending'}
                 >
                   <Select.Trigger className="sc-select-trigger" id="contact-project">
-                    {projectLabel}
-                    <span aria-hidden> ▾</span>
+                    <Select.ValueText>{projectLabel}</Select.ValueText>
                   </Select.Trigger>
-                  <Select.Content className="sc-select-content">
-                    {projectTypes.map((item) => (
-                      <Select.Item key={item.value} value={item.value} className="sc-select-item">
-                        {item.label}
-                        {item.value === projectType ? (
-                          <Check size={14} strokeWidth={2.5} aria-hidden />
-                        ) : null}
-                      </Select.Item>
-                    ))}
-                  </Select.Content>
+                  <Select.Positioner>
+                    <Select.Content className="sc-select-content">
+                      {projectTypes.map((item) => (
+                        <Select.Item key={item.value} value={item.value} className="sc-select-item">
+                          {item.label}
+                          {item.value === projectType ? (
+                            <Check size={14} strokeWidth={2.5} aria-hidden />
+                          ) : null}
+                        </Select.Item>
+                      ))}
+                    </Select.Content>
+                  </Select.Positioner>
                 </Select.Root>
               </Field.Root>
 
