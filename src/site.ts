@@ -11,6 +11,7 @@ export const site = {
     'No full-time developer required.',
   ] as const,
   heroLead: 'Turnkey systems that last. No full-time developer required.',
+  heroEyebrow: 'Web · Systems',
   email: 'brandongcryderman@gmail.com',
   phone: '+1-902-441-1924',
   phoneTel: '+19024411924',

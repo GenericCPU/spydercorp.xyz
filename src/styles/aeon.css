@@ -15,7 +15,7 @@
 }
 
 .sc-field [data-aeon-part='control'],
-.sc-field .sc-field-textarea {
+.sc-field [data-aeon-part='textarea'] {
   width: 100%;
   padding: 0.65rem 0.85rem;
   border-radius: var(--radius);
@@ -25,13 +25,13 @@
   font: inherit;
 }
 
-.sc-field .sc-field-textarea {
+.sc-field [data-aeon-part='textarea'] {
   resize: vertical;
   min-height: 6.5rem;
 }
 
 .sc-field [data-aeon-part='control']:focus,
-.sc-field .sc-field-textarea:focus {
+.sc-field [data-aeon-part='textarea']:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent-muted);

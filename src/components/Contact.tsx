@@ -160,9 +160,8 @@ export function Contact() {
 
               <Field.Root className="sc-field">
                 <Field.Label htmlFor="contact-message">Message</Field.Label>
-                <textarea
+                <Field.Textarea
                   id="contact-message"
-                  className="sc-field-textarea"
                   name="message"
                   rows={5}
                   required

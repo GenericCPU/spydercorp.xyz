@@ -10,7 +10,8 @@
     "portfolio:sync": "node scripts/sync-portfolio.mjs",
     "social:generate": "node scripts/generate-social.mjs",
     "print:cards": "node scripts/generate-print.mjs",
-    "prebuild": "npm run social:generate"
+    "aeon:ensure": "node ../../../../AeonUI/scripts/ensure-headless-built.mjs",
+    "prebuild": "npm run aeon:ensure && npm run social:generate"
   },
   "dependencies": {
     "@xstate/react": "^5.0.3",

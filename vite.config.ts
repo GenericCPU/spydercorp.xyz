@@ -3,10 +3,13 @@ import type { IncomingMessage } from 'node:http';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig, type Plugin } from 'vite';
+import { forwardContact } from './api/lib/contactServer';
 
 const siteDir = path.dirname(fileURLToPath(import.meta.url));
-const aeonPackages = path.resolve(siteDir, '../../../../AeonUI/packages');
-import { forwardContact } from './api/lib/contactServer';
+const aeonRoot = process.env.AEON_UI_ROOT
+  ? path.resolve(process.env.AEON_UI_ROOT)
+  : path.resolve(siteDir, '../../../../AeonUI');
+const aeonPackages = path.join(aeonRoot, 'packages');
 
 function readJsonBody(req: IncomingMessage): Promise<unknown> {
   return new Promise((resolve, reject) => {

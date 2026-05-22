@@ -7,7 +7,7 @@ export function Hero() {
     <section className="hero">
       <div className="container hero__grid">
         <div className="hero__copy">
-          <p className="hero__eyebrow">Marketing · Design · Engineering · Systems</p>
+          <p className="hero__eyebrow">{site.heroEyebrow}</p>
 
           <h1 className="hero__title">
             {site.heroTitle}
