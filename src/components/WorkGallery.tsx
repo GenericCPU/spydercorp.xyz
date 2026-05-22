@@ -1,5 +1,4 @@
-import { Dialog } from '@ark-ui/react/dialog';
-import { Portal } from '@ark-ui/react/portal';
+import { Dialog } from '@aeon-ui/react';
 import { ArrowUpRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
 import { useCallback, useEffect, useState } from 'react';
 import { portfolio, type PortfolioProject, type PortfolioShot } from '../data/portfolio';
@@ -100,68 +99,64 @@ function ProjectGallery({ project }: { project: PortfolioProject }) {
 
       <Dialog.Root
         open={lightbox.open}
-        lazyMount
-        unmountOnExit
-        onOpenChange={(d) => {
-          if (!d.open) lightbox.close();
+        onOpenChange={(open) => {
+          if (!open) lightbox.close();
         }}
       >
-        <Portal>
-          <Dialog.Backdrop className="work-lightbox-backdrop" />
-          <Dialog.Positioner className="work-lightbox-positioner">
-            <Dialog.Content className="work-lightbox">
-              <Dialog.Title className="sr-only">
-                {lightbox.current?.alt ?? project.title}
-              </Dialog.Title>
-              <header className="work-lightbox__header">
+        <Dialog.Backdrop className="work-lightbox-backdrop" />
+        <Dialog.Positioner className="work-lightbox-positioner">
+          <Dialog.Content className="work-lightbox">
+            <Dialog.Title className="sr-only">
+              {lightbox.current?.alt ?? project.title}
+            </Dialog.Title>
+            <header className="work-lightbox__header">
+              {shots.length > 1 ? (
+                <button
+                  type="button"
+                  className="work-lightbox__control"
+                  aria-label="Previous image"
+                  onClick={() => lightbox.go(-1)}
+                >
+                  <ChevronLeft size={20} strokeWidth={2} aria-hidden />
+                </button>
+              ) : (
+                <span className="work-lightbox__control-spacer" aria-hidden />
+              )}
+
+              <div className="work-lightbox__text">
+                <p className="work-lightbox__project">{project.title}</p>
+              </div>
+
+              <div className="work-lightbox__actions">
+                {shots.length > 1 ? (
+                  <span className="work-lightbox__count" aria-live="polite">
+                    {(lightbox.index ?? 0) + 1}
+                    <span className="work-lightbox__count-sep">/</span>
+                    {shots.length}
+                  </span>
+                ) : null}
                 {shots.length > 1 ? (
                   <button
                     type="button"
                     className="work-lightbox__control"
-                    aria-label="Previous image"
-                    onClick={() => lightbox.go(-1)}
+                    aria-label="Next image"
+                    onClick={() => lightbox.go(1)}
                   >
-                    <ChevronLeft size={20} strokeWidth={2} aria-hidden />
+                    <ChevronRight size={20} strokeWidth={2} aria-hidden />
                   </button>
-                ) : (
-                  <span className="work-lightbox__control-spacer" aria-hidden />
-                )}
-
-                <div className="work-lightbox__text">
-                  <p className="work-lightbox__project">{project.title}</p>
-                </div>
-
-                <div className="work-lightbox__actions">
-                  {shots.length > 1 ? (
-                    <span className="work-lightbox__count" aria-live="polite">
-                      {(lightbox.index ?? 0) + 1}
-                      <span className="work-lightbox__count-sep">/</span>
-                      {shots.length}
-                    </span>
-                  ) : null}
-                  {shots.length > 1 ? (
-                    <button
-                      type="button"
-                      className="work-lightbox__control"
-                      aria-label="Next image"
-                      onClick={() => lightbox.go(1)}
-                    >
-                      <ChevronRight size={20} strokeWidth={2} aria-hidden />
-                    </button>
-                  ) : null}
-                  <Dialog.CloseTrigger className="work-lightbox__control" aria-label="Close">
-                    <X size={20} strokeWidth={2} aria-hidden />
-                  </Dialog.CloseTrigger>
-                </div>
-              </header>
-              {lightbox.current && (
-                <figure className="work-lightbox__figure">
-                  <img src={lightbox.current.src} alt={lightbox.current.alt} />
-                </figure>
-              )}
-            </Dialog.Content>
-          </Dialog.Positioner>
-        </Portal>
+                ) : null}
+                <Dialog.CloseTrigger className="work-lightbox__control" aria-label="Close">
+                  <X size={20} strokeWidth={2} aria-hidden />
+                </Dialog.CloseTrigger>
+              </div>
+            </header>
+            {lightbox.current && (
+              <figure className="work-lightbox__figure">
+                <img src={lightbox.current.src} alt={lightbox.current.alt} />
+              </figure>
+            )}
+          </Dialog.Content>
+        </Dialog.Positioner>
       </Dialog.Root>
     </article>
   );

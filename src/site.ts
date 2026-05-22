@@ -2,9 +2,9 @@ export const site = {
   url: 'https://spidercorp.xyz',
   domain: 'spidercorp.xyz',
   brand: 'SpiderCorp',
-  title: 'SpiderCorp — Web · Brand · Systems',
+  title: 'SpiderCorp — Web · Systems',
   description:
-    'Web, brand, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
+    'Web, custom systems, and engineering for local businesses and product teams. Flexible engagement — project, retainer, or pro bono for qualifying local shops.',
   heroTitle: 'Premium web & custom architecture, built for your business.',
   heroLeadLines: [
     'Turnkey systems that last.',
@@ -18,14 +18,14 @@ export const site = {
   announcementCta: 'Call me for inquiries',
   demoUrl: 'https://bringmebuds.vercel.app',
   servicesSectionLead:
-    'Brand, design, and engineering in one thread — one partner for your site, your tools, and the systems that run your business.',
+    'Design and engineering in one thread — one partner for your site, your tools, and the systems that run your business.',
   workSectionLabel: 'Work',
   workSectionTitle: 'Recent projects',
   contactSectionLead: 'I look forward to helping you grow your business.',
   heroStats: [
     {
       label: 'Front of house',
-      detail: 'Brand, product UI, and storefronts your customers depend on',
+      detail: 'Product UI and storefronts your customers depend on',
     },
     {
       label: 'Back of house',
@@ -39,12 +39,6 @@ export const site = {
 } as const;
 
 export const services = [
-  {
-    id: 'brand',
-    title: 'Brand & marketing',
-    description: 'Positioning and visibility so the right people find you.',
-    highlights: ['Brand & messaging', 'Local SEO', 'Social & campaign assets', 'Google Business setup'],
-  },
   {
     id: 'design',
     title: 'Web design',
@@ -108,7 +102,7 @@ export const process = [
   {
     step: '02',
     title: 'Design & build',
-    body: 'Brand, UI, and code in one thread. No handoffs between a designer who doesn’t ship and a dev who never met you.',
+    body: 'UI and code in one thread. No handoffs between a designer who doesn’t ship and a dev who never met you.',
   },
   {
     step: '03',
@@ -127,7 +121,6 @@ export const projectTypes = [
   { label: 'Redesign / refresh', value: 'redesign' },
   { label: 'E-commerce / shop', value: 'shop' },
   { label: 'Custom admin / systems', value: 'systems' },
-  { label: 'Brand & marketing', value: 'brand' },
   { label: 'Not sure yet', value: 'unsure' },
 ] as const;
 

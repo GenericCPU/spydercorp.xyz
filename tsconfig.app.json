@@ -15,7 +15,12 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
+    "noFallthroughCasesInSwitch": true,
+    "paths": {
+      "@aeon-ui/core": ["../../../../AeonUI/packages/core/dist/index.d.ts"],
+      "@aeon-ui/primitives": ["../../../../AeonUI/packages/primitives/dist/index.d.ts"],
+      "@aeon-ui/react": ["../../../../AeonUI/packages/react/dist/index.d.ts"]
+    }
   },
   "include": ["src"]
 }

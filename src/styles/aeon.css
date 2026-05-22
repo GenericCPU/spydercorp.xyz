@@ -1,36 +1,4 @@
-/* Ark UI — raw monochrome */
-
-.sc-dialog-backdrop[hidden],
-.sc-dialog-panel[hidden],
-.sc-dialog-panel[data-state='closed'] {
-  display: none !important;
-}
-
-.sc-dialog-backdrop {
-  position: fixed;
-  inset: 0;
-  z-index: 200;
-  background: rgba(0, 0, 0, 0.8);
-}
-
-.sc-dialog-positioner {
-  position: fixed;
-  inset: 0;
-  z-index: 201;
-  display: flex;
-  pointer-events: none;
-}
-
-.sc-dialog-panel {
-  pointer-events: auto;
-  width: min(100%, 300px);
-  height: 100%;
-  background: var(--bg);
-  border-right: 1px solid var(--border-strong);
-  display: flex;
-  flex-direction: column;
-  overflow-y: auto;
-}
+/* Aeon UI — SpiderCorp theme hooks (data-aeon-*) */
 
 .sc-field {
   display: flex;
@@ -38,7 +6,7 @@
   gap: 0.35rem;
 }
 
-.sc-field [data-part='label'] {
+.sc-field [data-aeon-part='label'] {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.06em;
@@ -46,8 +14,8 @@
   color: var(--text-muted);
 }
 
-.sc-field [data-part='input'],
-.sc-field [data-part='textarea'] {
+.sc-field [data-aeon-part='control'],
+.sc-field .sc-field-textarea {
   width: 100%;
   padding: 0.65rem 0.85rem;
   border-radius: var(--radius);
@@ -57,13 +25,13 @@
   font: inherit;
 }
 
-.sc-field [data-part='textarea'] {
+.sc-field .sc-field-textarea {
   resize: vertical;
   min-height: 6.5rem;
 }
 
-.sc-field [data-part='input']:focus,
-.sc-field [data-part='textarea']:focus {
+.sc-field [data-aeon-part='control']:focus,
+.sc-field .sc-field-textarea:focus {
   outline: none;
   border-color: var(--accent);
   box-shadow: 0 0 0 1px var(--accent-muted);
@@ -84,7 +52,7 @@
   cursor: pointer;
 }
 
-.sc-select-trigger[data-state='open'],
+.sc-select-trigger[data-aeon-state='open'],
 .sc-select-trigger:hover {
   border-color: var(--border-strong);
 }
@@ -102,34 +70,24 @@
   align-items: center;
   justify-content: space-between;
   gap: 0.5rem;
+  width: 100%;
   padding: 0.5rem 0.65rem;
   border-radius: var(--radius-lg);
+  border: none;
   font-size: 0.9rem;
   line-height: 1.25;
   cursor: pointer;
   color: var(--text-muted);
+  background: transparent;
+  text-align: left;
 }
 
-.sc-select-item [data-part='item-text'] {
-  flex: 1;
-  min-width: 0;
-}
-
-.sc-select-item [data-part='item-indicator'] {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  line-height: 1;
-  color: var(--accent);
-}
-
-.sc-select-item[data-highlighted] {
+.sc-select-item:hover {
   background: rgba(255, 255, 255, 0.06);
   color: var(--text);
 }
 
-.sc-select-item[data-state='checked'] {
+.sc-select-item[data-aeon-state='selected'] {
   color: var(--text);
   font-weight: 600;
 }
@@ -159,7 +117,8 @@
   border-right: none;
 }
 
-.sc-tabs-trigger[data-selected] {
+.sc-tabs-trigger[data-selected],
+.sc-tabs-trigger[data-aeon-state='selected'] {
   background: var(--accent);
   color: var(--on-accent);
 }
@@ -198,7 +157,7 @@
   transition: transform 0.2s ease;
 }
 
-.sc-accordion-indicator[data-state='open'] {
+.sc-accordion-item[data-aeon-state='open'] .sc-accordion-indicator {
   transform: rotate(180deg);
 }
 

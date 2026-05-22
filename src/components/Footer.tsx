@@ -11,7 +11,7 @@ export function Footer() {
           © {year} {site.brand} · {site.domain}
         </p>
         <p className="footer__tag">
-          <span className="text-accent">corp</span> · marketing · web · engineering
+          <span className="text-accent">corp</span> · web · engineering · systems
         </p>
       </div>
     </footer>

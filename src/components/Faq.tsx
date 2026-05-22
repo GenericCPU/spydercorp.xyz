@@ -1,4 +1,4 @@
-import { Accordion } from '@ark-ui/react/accordion';
+import { Accordion } from '@aeon-ui/react';
 import { ChevronDown } from 'lucide-react';
 import { faq } from '../site';
 import './Faq.css';
@@ -15,16 +15,16 @@ export function Faq() {
           </p>
         </div>
 
-        <Accordion.Root className="faq__accordion panel" collapsible multiple>
+        <Accordion.Root className="faq__accordion panel" multiple collapsible>
           {faq.map((item) => (
             <Accordion.Item key={item.id} value={item.id} className="sc-accordion-item">
-              <Accordion.ItemTrigger className="sc-accordion-trigger">
+              <Accordion.ItemTrigger value={item.id} className="sc-accordion-trigger">
                 {item.question}
                 <Accordion.ItemIndicator className="sc-accordion-indicator">
                   <ChevronDown size={20} aria-hidden />
                 </Accordion.ItemIndicator>
               </Accordion.ItemTrigger>
-              <Accordion.ItemContent className="sc-accordion-content">
+              <Accordion.ItemContent value={item.id}>
                 <div className="sc-accordion-body">{item.answer}</div>
               </Accordion.ItemContent>
             </Accordion.Item>

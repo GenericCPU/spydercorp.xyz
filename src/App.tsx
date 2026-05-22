@@ -1,3 +1,4 @@
+import { Toast } from '@aeon-ui/react';
 import { AppToaster } from './components/AppToaster';
 import { Contact } from './components/Contact';
 import { Faq } from './components/Faq';
@@ -14,7 +15,7 @@ import './components/SiteTop.css';
 
 export default function App() {
   return (
-    <>
+    <Toast.Provider limit={3}>
       <GridMesh />
       <div className="site-top">
         <AnnouncementBar />
@@ -30,6 +31,6 @@ export default function App() {
       </main>
       <Footer />
       <AppToaster />
-    </>
+    </Toast.Provider>
   );
 }

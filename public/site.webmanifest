@@ -1,7 +1,7 @@
 {
   "name": "SpiderCorp",
   "short_name": "SpiderCorp",
-  "description": "Web, brand, and custom systems for local businesses and product teams.",
+  "description": "Web and custom systems for local businesses and product teams.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0a0a",

@@ -1,10 +1,9 @@
-import { Tabs } from '@ark-ui/react/tabs';
-import { Check, Code2, HandCoins, HandHeart, Megaphone, Palette, Server, UserRound } from 'lucide-react';
+import { Tabs } from '@aeon-ui/react';
+import { Check, Code2, HandCoins, HandHeart, Palette, Server, UserRound } from 'lucide-react';
 import { services, site, studioCommitments } from '../site';
 import './Services.css';
 
 const icons = {
-  brand: Megaphone,
   design: Palette,
   engineering: Code2,
   systems: Server,

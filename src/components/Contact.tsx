@@ -1,23 +1,20 @@
-import { createListCollection } from '@ark-ui/react/collection';
-import { Field } from '@ark-ui/react/field';
-import { Select } from '@ark-ui/react/select';
+import { Field, Select, useToast } from '@aeon-ui/react';
 import { Check, Mail, MapPin, Phone } from 'lucide-react';
 import { useState } from 'react';
 import { submitContactForm } from '../lib/submitContact';
-import { toaster } from '../lib/toaster';
 import { projectTypes, site } from '../site';
 import './Contact.css';
-
-const projectCollection = createListCollection({
-  items: projectTypes.map((p) => ({ label: p.label, value: p.value })),
-});
 
 type FormStatus = 'idle' | 'sending' | 'success' | 'error';
 
 export function Contact() {
-  const [projectType, setProjectType] = useState<string[]>([projectTypes[0].value]);
+  const { publish } = useToast();
+  const [projectType, setProjectType] = useState<string>(projectTypes[0].value);
   const [status, setStatus] = useState<FormStatus>('idle');
   const [errorMessage, setErrorMessage] = useState('');
+
+  const projectLabel =
+    projectTypes.find((p) => p.value === projectType)?.label ?? 'General';
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -30,9 +27,6 @@ export function Contact() {
     const honeypot = String(data.get('_gotcha') ?? '');
 
     if (honeypot) return;
-
-    const typeLabel =
-      projectTypes.find((p) => p.value === projectType[0])?.label ?? 'General';
 
     if (!name || !email || !message) {
       setStatus('error');
@@ -53,14 +47,14 @@ export function Contact() {
       name,
       email,
       message,
-      projectType: typeLabel,
+      projectType: projectLabel,
     });
 
     if (result.ok) {
       setStatus('idle');
       form.reset();
-      setProjectType([projectTypes[0].value]);
-      toaster.success({
+      setProjectType(projectTypes[0].value);
+      publish({
         title: 'Message sent',
         description: "We'll get back to you at the email you provided.",
       });
@@ -117,14 +111,21 @@ export function Contact() {
                 aria-hidden
               />
 
-              <Field.Root className="sc-field" required>
-                <Field.Label>Name</Field.Label>
-                <Field.Input name="name" autoComplete="name" required disabled={status === 'sending'} />
+              <Field.Root className="sc-field">
+                <Field.Label htmlFor="contact-name">Name</Field.Label>
+                <Field.Control
+                  id="contact-name"
+                  name="name"
+                  autoComplete="name"
+                  required
+                  disabled={status === 'sending'}
+                />
               </Field.Root>
 
-              <Field.Root className="sc-field" required>
-                <Field.Label>Email</Field.Label>
-                <Field.Input
+              <Field.Root className="sc-field">
+                <Field.Label htmlFor="contact-email">Email</Field.Label>
+                <Field.Control
+                  id="contact-email"
                   name="email"
                   type="email"
                   autoComplete="email"
@@ -134,38 +135,34 @@ export function Contact() {
               </Field.Root>
 
               <Field.Root className="sc-field">
-                <Field.Label>Project type</Field.Label>
+                <Field.Label htmlFor="contact-project">Project type</Field.Label>
                 <Select.Root
-                  collection={projectCollection}
                   value={projectType}
-                  onValueChange={(e) => setProjectType(e.value)}
-                  positioning={{ sameWidth: true }}
+                  onValueChange={setProjectType}
                   disabled={status === 'sending'}
                 >
-                  <Select.Control>
-                    <Select.Trigger className="sc-select-trigger">
-                      <Select.ValueText placeholder="Select type" />
-                      <Select.Indicator aria-hidden>▾</Select.Indicator>
-                    </Select.Trigger>
-                  </Select.Control>
-                  <Select.Positioner>
-                    <Select.Content className="sc-select-content">
-                      {projectCollection.items.map((item) => (
-                        <Select.Item key={item.value} item={item} className="sc-select-item">
-                          <Select.ItemText>{item.label}</Select.ItemText>
-                          <Select.ItemIndicator>
-                            <Check size={14} strokeWidth={2.5} aria-hidden />
-                          </Select.ItemIndicator>
-                        </Select.Item>
-                      ))}
-                    </Select.Content>
-                  </Select.Positioner>
+                  <Select.Trigger className="sc-select-trigger" id="contact-project">
+                    {projectLabel}
+                    <span aria-hidden> ▾</span>
+                  </Select.Trigger>
+                  <Select.Content className="sc-select-content">
+                    {projectTypes.map((item) => (
+                      <Select.Item key={item.value} value={item.value} className="sc-select-item">
+                        {item.label}
+                        {item.value === projectType ? (
+                          <Check size={14} strokeWidth={2.5} aria-hidden />
+                        ) : null}
+                      </Select.Item>
+                    ))}
+                  </Select.Content>
                 </Select.Root>
               </Field.Root>
 
-              <Field.Root className="sc-field" required>
-                <Field.Label>Message</Field.Label>
-                <Field.Textarea
+              <Field.Root className="sc-field">
+                <Field.Label htmlFor="contact-message">Message</Field.Label>
+                <textarea
+                  id="contact-message"
+                  className="sc-field-textarea"
                   name="message"
                   rows={5}
                   required

@@ -11,10 +11,9 @@ const markHtml = markSvg
     '<svg width="100%" height="100%" preserveAspectRatio="xMidYMid meet" ',
   );
 
-const PILLARS_LABEL = 'Web · Brand · Systems';
+const PILLARS_LABEL = 'Web · Systems';
 
 const SERVICES = [
-  'Brand & marketing',
   'Web design & shops',
   'Custom systems & admin',
   'Flexible engagement',

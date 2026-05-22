@@ -1,6 +1,11 @@
 import react from '@vitejs/plugin-react';
 import type { IncomingMessage } from 'node:http';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import { defineConfig, type Plugin } from 'vite';
+
+const siteDir = path.dirname(fileURLToPath(import.meta.url));
+const aeonPackages = path.resolve(siteDir, '../../../../AeonUI/packages');
 import { forwardContact } from './api/lib/contactServer';
 
 function readJsonBody(req: IncomingMessage): Promise<unknown> {
@@ -58,4 +63,14 @@ function contactApiDev(): Plugin {
 
 export default defineConfig({
   plugins: [react(), contactApiDev()],
+  resolve: {
+    alias: {
+      '@aeon-ui/core': path.join(aeonPackages, 'core/dist/index.js'),
+      '@aeon-ui/primitives': path.join(aeonPackages, 'primitives/dist/index.js'),
+      '@aeon-ui/react': path.join(aeonPackages, 'react/dist/index.js'),
+    },
+  },
+  optimizeDeps: {
+    include: ['@aeon-ui/react', '@aeon-ui/core', '@aeon-ui/primitives', 'xstate', '@xstate/react'],
+  },
 });
